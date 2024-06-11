@@ -1,0 +1,125 @@
+$mainColor: #FFB600;
+$mainLightColor: #FEDA7F;
+$fontColor: #473B35;
+$fontColorBtn: #180b03;
+$whiteColor: #FCFCFC;
+$whiteColor2: #FEFEFE;
+$textColor: #695F5A;
+$greyColor: #B7B7B7;
+$optionColor: #909090;
+$footerColor: #E46A2D;
+
+$mainTransition: all .3s ease-out;
+
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@function toEm($value) {
+  $emValue: calc($value / 16) + em;
+  @return $emValue;
+}
+
+$mockupWidth: toRem(1920); // 1920 px;
+$containerWidth: 1400px;
+$lineHeight: 1.5;
+$mainTitleSize: toRem(73.6);
+
+$ps: toEm($containerWidth);
+$tablet: toEm(991.98);
+$mobile: toEm(767.98);
+$smallMobile: toEm(579.98);
+
+
+
+@mixin adaptiveValue($property, $S-max, $S-min ) {
+  $k: calc(($S-max - $S-min)/(1509 - 991.98));
+  $b: $S-min - $k * 991.98;
+
+  $b: $b + px;
+  #{$property}: calc(#{$k} * 100vw + #{$b})
+}
+
+@mixin adaptiveValueMobile($property, $S-max, $S-min ) {
+  $k: calc(($S-max - $S-min)/(991.98 - 767.98));
+  $b: $S-min - $k * 767.98;
+
+  $b: $b + px;
+  #{$property}: calc(#{$k} * 100vw + #{$b})
+}
+
+@mixin adaptiveValueSMobile($property, $S-max, $S-min ) {
+  $k: calc(($S-max - $S-min)/(767.98 - 374.98));
+  $b: $S-min - $k * 374.98;
+
+  $b: $b + px;
+  #{$property}: calc(#{$k} * 100vw + #{$b})
+}
+
+@mixin title {
+  font-size: toRem(75.2);
+  line-height: 1;
+  @media (max-width: $tablet) {
+     font-size: toRem(54);
+  }
+  @media (max-width: $smallMobile) {
+     font-size: toRem(36);
+  }
+}
+
+@mixin link-btn ($backgroundColor, $color, $secondColor) {
+  display: inline-block;
+  background-color: $backgroundColor;
+  color: $color;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 0;
+  text-align: start;
+  position: relative;
+  transition: $mainTransition;
+  box-shadow: 0 8px 4px -6px #7777776f;
+  border: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 3.3rem;
+    background-color: $secondColor;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+  }
+
+  @media (any-hover:hover) {
+    &:hover {
+      transform: translateY(3px);
+    }
+  }
+}
+
+
+// @mixin adaptiveFont ($pcFontSize, $mobFontSize) {
+//   $addSize: $pcFontSize - $mobFontSize;
+//   $addMobSize: $addSize + $addSize * 0.7;
+
+//   @media(max-width: 767px) {
+//     font-size: calc(#{$mobFontSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$mockupWidth})
+//   );
+// }
+
+//   @media(min-width: 767px) {
+//   // font-size: $pcFontSize + px;
+//   font-size: calc(#{$mobFontSize + px} + #{$addSize} * (100vw / #{$mockupWidth}));
+// }
+// }
+
+// @function adaptiveFontSize($f-max, $f-min, $v-max, $v-min, $units: rem) {
+//   $k: calc(($f-max - $f-min)/($v-max - $v-min));
+//   $b: $f-min - $k * $v-min;
+
+//   $b: $b + $units;
+
+//   @return calc(#{$k} * 100vw + #{$b});
+// }

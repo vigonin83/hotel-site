@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./styles/index.css" />
+	<!-- <script defer src="js/index.js"></script> -->
+	<title>Document</title>
+</head>
+
+<body class="body">
+	<div class="app__wrapper">
+		@@include('html/_header.htm')
+		@@include('html/_mobileMenu.htm')
+		<main id="main" class="main">
+			<section class="booking">
+				<div class="booking__form booking-form">
+					<h3 class="booking-form__title">Экспресс бронирование</h3>
+					<div class="booking-form__arrival">
+						<div class="booking-form__date">
+							<span class="booking-form__note arrive__icon">Заезд</span>
+							<span id="current-date" class="booking-form__day">Cегодня 11 Мая</span>
+						</div>
+						<div class="booking-form__date-select">
+							<p id="arrive-date" class="booking-form__date-current">12 Мая</p>
+							<div class="booking-form__schedule">
+								<img src="./img/icons/schedule.svg" alt="выбрать дату" />
+							</div>
+						</div>
+					</div>
+					<div class="booking-form__departure">
+						<div class="booking-form__date">
+							<span class="booking-form__note departure__icon">Выезд</span>
+							<span class="booking-form__day">Через 7 ночей</span>
+						</div>
+						<div class="booking-form__date-select">
+							<p id="departure-date" class="booking-form__date-current">5 Июня</p>
+							<div class="booking-form__schedule">
+								<img src="./img/icons/schedule.svg" alt="выбрать дату" />
+							</div>
+						</div>
+					</div>
+					<div class="booking-form__counters">
+						<div class="booking-form__counter counter">
+							<div class="counter__title">
+								<span class="booking-form__note">Гости</span>
+								<img class="booking-form__icon" src="./img/icons/guest.svg" alt="гости" />
+							</div>
+							<div class="counter__item">
+								<span id="counter-guests" class="counter__number">1</span>
+								<div class="counter__btn-container" data-set="guests">
+									<button id="counterBtn-guestDecr" class="counter__btn-minus">&minus;</button>
+									<button id="counterBtn-guestIncr" class="counter__btn-plus">&plus;</button>
+								</div>
+							</div>
+						</div>
+						<div class="booking-form__counter counter">
+							<div class="counter__title">
+								<span class="booking-form__note">Номера</span>
+								<img class="booking-form__icon" src="./img/icons/home.svg" alt="номера" />
+							</div>
+							<div class="counter__item">
+								<span id="counter-rooms" class="counter__number">1</span>
+								<div class="counter__btn-container" data-set="rooms">
+									<button id="counterBtn-roomDecr" class="counter__btn-minus">&minus;</button>
+									<button id="counterBtn-roomIncr"class="counter__btn-plus">&plus;</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="booking__btn-container">
+						<a href="#" class="booking__search-btn">Найти номер</a>
+						<a href="/rooms.html" class="booking__link-btn">Забронировать первым</a>
+					</div>
+				</div>
+				<div class="main__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="booking__content" style="background-image: url(./img/backgrounds/main-1.jpg)">
+								<div class="booking__content-wrapper">
+									<div class="booking__content_empty"></div>
+									<div class="booking__content_shadow">
+										<div class="booking__content-body">
+											<span class="booking__date">18 Апреля 2020</span>
+											<h1 class="booking__title">Новые номера</h1>
+											<p class="booking__text">
+												Не следует, однако, забывать, что социально-экономическое развитие однозначно
+												фиксирует необходимость новых принципов формирования материально-технической и
+												кадровой базы.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="booking__content" style="background-image: url(./img/backgrounds/main-2.jpg)">
+								<div class="booking__content-wrapper">
+									<div class="booking__content_empty"></div>
+									<div class="booking__content_shadow">
+										<div class="booking__content-body">
+											<span class="booking__date">7 Мая 2021</span>
+											<h2 class="booking__title">СКИДКИ ДО 20% </h2>
+											<p class="booking__text">
+												А ещё действия представителей оппозиции лишь добавляют фракционных разногласий и
+												превращены в посмешище, хотя само их существование приносит несомненную пользу
+												обществу. Явные признаки победы институционализации своевременно верифицированы.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</section>
+			<section class="rooms-catalog">
+				<div class="rooms-catalog__container">
+					<div class="rooms-catalog__wrapper">
+						<aside class="rooms-catalog__filter filter-rooms">
+							<div class="filter-rooms__wrapper">
+								<div class="filter-rooms__form">
+									<h2 class="filter-rooms__title">Номера</h2>
+									<div class="filter-rooms__price">
+										<label for="price">Цена: 7 000 &#8381;</label>
+										<input type="range" id="price" name="price" min="8000" max="20000" value="4000"
+											step="1000" />
+										<div class="filter-rooms__item-wrapper">
+											<span>800 &#8381;</span>
+											<span>20 000 &#8381;</span>
+										</div>
+									</div>
+									<div class="filter-rooms__popularity">
+										<label for="popularity">Популярность: 2</label>
+										<input type="range" id="popularity" name="popularity" min="0" max="5" value="4"
+											step="1" />
+										<div class="filter-rooms__item-wrapper">
+											<span>0</span>
+											<span>5</span>
+										</div>
+									</div>
+									<div class="filter-rooms__beds">
+										<label for="popularity">Места: 3</label>
+										<input type="range" id="beds" name="beds" min="1" max="8" value="2" step="1" />
+										<div class="filter-rooms__item-wrapper">
+											<span>1</span>
+											<span>8</span>
+										</div>
+									</div>
+									<button class="filter-rooms__reset">Очистить фильтр</button>
+								</div>
+							</div>
+						</aside>
+						<div class="room-card__container">
+							<div class="room-card__wrapper">
+								<div class="room-card__item">
+									<div class="room-card__content">
+										<div class="room-card__content-top">
+											<h4 class="room-card__type-title">Общий номер</h4>
+											<div class="room-card__rating">
+												<ul class="room-card__stars">
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+												</ul>
+												<span class="room-card__rate" data-set="5.0">5.0</span>
+											</div>
+										</div>
+										<div class="room-card__content-bottom">
+											<div class="room-card__bed-qty">
+												<div class="room-card__qty-title">
+													<img src="./img/icons/guest.svg" alt="места" />
+													<span>Места</span>
+												</div>
+												<span class="room-card__bed-number">4-6</span>
+											</div>
+											<p class="room-card__price">900 &#8381;</p>
+											<a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+										</div>
+									</div>
+									<div class="room-card__img-container">
+										<img class="room-card__img" src="./img/content/06.png" alt="комната" />
+									</div>
+								</div>
+								<div class="room-card__item">
+									<div class="room-card__content">
+										<div class="room-card__content-top">
+											<h4 class="room-card__type-title">Стандартный улучшенный</h4>
+											<div class="room-card__rating">
+												<ul class="room-card__stars">
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+												</ul>
+												<span class="room-card__rate" data-set="5.0">5.0</span>
+											</div>
+										</div>
+										<div class="room-card__content-bottom">
+											<div class="room-card__bed-qty">
+												<div class="room-card__qty-title">
+													<img src="./img/icons/guest.svg" alt="места" />
+													<span>Места</span>
+												</div>
+												<span class="room-card__bed-number">1-2</span>
+											</div>
+											<p class="room-card__price">3 700 &#8381;</p>
+											<a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+										</div>
+									</div>
+									<div class="room-card__img-container">
+										<img class="room-card__img" src="./img/content/02.png" alt="комната" />
+									</div>
+
+								</div>
+								<div class="room-card__item">
+									<div class="room-card__content">
+										<div class="room-card__content-top">
+											<h4 class="room-card__type-title">Стандарт</h4>
+											<div class="room-card__rating">
+												<ul class="room-card__stars">
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+												</ul>
+												<span class="room-card__rate" data-set="5.0">5.0</span>
+											</div>
+										</div>
+										<div class="room-card__content-bottom">
+											<div class="room-card__bed-qty">
+												<div class="room-card__qty-title">
+													<img src="./img/icons/guest.svg" alt="места" />
+													<span>Места</span>
+												</div>
+												<span class="room-card__bed-number">1-2</span>
+											</div>
+											<p class="room-card__price">2 600 &#8381;</p>
+											<a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+										</div>
+									</div>
+									<div class="room-card__img-container">
+										<img class="room-card__img" src="./img/content/03.png" alt="комната" />
+									</div>
+
+								</div>
+								<div class="room-card__item">
+									<div class="room-card__content">
+										<div class="room-card__content-top">
+											<h4 class="room-card__type-title">Стандарт</h4>
+											<div class="room-card__rating">
+												<ul class="room-card__stars">
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+												</ul>
+												<span class="room-card__rate" data-set="5.0">5.0</span>
+											</div>
+										</div>
+										<div class="room-card__content-bottom">
+											<div class="room-card__bed-qty">
+												<div class="room-card__qty-title">
+													<img src="./img/icons/guest.svg" alt="места" />
+													<span>Места</span>
+												</div>
+												<span class="room-card__bed-number">1-2</span>
+											</div>
+											<p class="room-card__price">2 600 &#8381;</p>
+											<a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+										</div>
+									</div>
+									<div class="room-card__img-container">
+										<img class="room-card__img" src="./img/content/04.png" alt="номер" />
+									</div>
+								</div>
+								<div class="room-card__item">
+									<div class="room-card__content">
+										<div class="room-card__content-top">
+											<h4 class="room-card__type-title">Люкс</h4>
+											<div class="room-card__rating">
+												<ul class="room-card__stars">
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+												</ul>
+												<span class="room-card__rate" data-set="5.0">5.0</span>
+											</div>
+										</div>
+										<div class="room-card__content-bottom">
+											<div class="room-card__bed-qty">
+												<div class="room-card__qty-title">
+													<img src="./img/icons/guest.svg" alt="места" />
+													<span>Места</span>
+												</div>
+												<span class="room-card__bed-number">1-2</span>
+											</div>
+											<p class="room-card__price">10 200 &#8381;</p>
+											<a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+										</div>
+									</div>
+									<div class="room-card__img-container">
+										<img class="room-card__img" src="./img/content/05.png" alt="номер" />
+									</div>
+
+								</div>
+								<div class="room-card__item">
+									<div class="room-card__content">
+										<div class="room-card__content-top">
+											<h4 class="room-card__type-title">Семейный номер</h4>
+											<div class="room-card__rating">
+												<ul class="room-card__stars">
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+													<li class="room-card__star-item">
+														<img src="./img/icons/star-full.png" alt="рейтинг" />
+													</li>
+												</ul>
+												<span class="room-card__rate" data-set="5.0">5.0</span>
+											</div>
+										</div>
+										<div class="room-card__content-bottom">
+											<div class="room-card__bed-qty">
+												<div class="room-card__qty-title">
+													<img src="./img/icons/guest.svg" alt="места" />
+													<span>Места</span>
+												</div>
+												<span class="room-card__bed-number">1-4</span>
+											</div>
+											<p class="room-card__price">8 800 &#8381;</p>
+											<a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+										</div>
+									</div>
+									<div class="room-card__img-container">
+										<img class="room-card__img" src="./img/content/06.png" alt="номер" />
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="rooms-catalog__link-container">
+							<a href="/rooms.html" class="rooms-catalog__link-btn">Показать еще номера</a>
+							<span class="rooms-catalog__prompt">Не нашли подходящее? Доступно еще 16 предложений</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="benefits">
+				<div class="benefits__container">
+					<div class="benefits__wrapper">
+						<h2 class="benefits__title">Бронируя на сайте вы получаете</h2>
+						<div class="benefits__items">
+							<div class="benefits__item">
+								<div class="benefits__img-box">
+									<img src="./img/icons/bell-2.svg" alt="лучшая цена" class="benefits__img" />
+								</div>
+								<span class="benefits__text">Гарантия лучшей цены*</span>
+							</div>
+							<div class="benefits__item">
+								<div class="benefits__img-box">
+									<img src="./img/icons/parking.svg" alt="бесплатная парковка" class="benefits__img" />
+								</div>
+								<span class="benefits__text">Бесплатная парковка</span>
+							</div>
+							<div class="benefits__item">
+								<div class="benefits__img-box">
+									<img src="./img/icons/combine.svg" alt="поздний выезд" class="benefits__img" />
+								</div>
+								<span class="benefits__text">Бесплатный поздний выезд до 16:00**</span>
+							</div>
+							<div class="benefits__item">
+								<div class="benefits__img-box">
+									<img src="./img/icons/machine.svg" alt="бесплатная стирка" class="benefits__img" />
+								</div>
+								<span class="benefits__text">Бесплатная стирка или глажка одной вещи при проживании от 5
+									дней</span>
+							</div>
+							<div class="benefits__item">
+								<div class="benefits__img-box">
+									<img src="./img/icons/shoes.svg" alt="ранний заезд" class="benefits__img" />
+								</div>
+								<span class="benefits__text">Бесплатный ранний заезд до 9:00**</span>
+							</div>
+						</div>
+						<div class="benefits__notes">
+							<p class="benefits__note-text">*Нашли дешевле? Уточняйте цену в отеле</p>
+							<p class="benefits__note-text">**При наличии свободных номеров, уточняйте в отеле</p>
+						</div>
+						<a href="/contacts" class="benefits__link-btn">Уточнить в отеле</a>
+					</div>
+				</div>
+			</section>
+			<section class="location">
+				<div class="location__wrapper">
+					<div class="location__address-item background-item"
+						style="background-image: url(./img/backgrounds/building-1.jpg)">
+						<p class="location__address">г. Новосибирск <br />ул. Ленина 83</p>
+					</div>
+					<div class="location__map-item background-item" style="background-image: url(./img/backgrounds/map.jpg)">
+						<div class="location__map-wrapper">
+							<a class="location__link-btn"
+								href="https://www.google.com/maps/place/Ulitsa+Lenina,+Novosibirsk,+Novosibirskaya+oblast'/@55.0186343,82.9122449,14.75z">Посмотреть
+								на карте</a>
+						</div>
+					</div>
+					<div class="location__about-item">
+						<div class="location__about-wrapper">
+							<div class="logo__wrapper">
+								<img class="location__logo" src="./img/icons/logo-2.svg" alt="логотип" />
+								<h3 class="location__about-title">ГОСТИНИЦА «АВИТЕЛЬ»</h3>
+							</div>
+							<div class="location__about-text">
+								<p>
+									Удобно расположена в центре города Новосибирска в шаговой доступности от Железнодорожного
+									вокзала и
+									метро Площадь Гарина-Михайловского.
+								</p>
+								<p>
+									К услугам гостей как современные комфортабельные номера, так и демократичные номера для 6-8
+									человек
+									со всеми удобствами в номере, а также ресторан, концеферн-залы и тренажерный зал.
+								</p>
+							</div>
+							<div class="location__about-nearby">
+								<p class="location__about-note">Рядом находится</p>
+								<div class="location__transport-wrapper">
+									<div class="location__about-metro">
+										<img src="./img/icons/metro.svg" alt="метро" />
+										<span>Площадь Гарина-Михайловского</span>
+									</div>
+									<div class="location__about-station">
+										<img src="./img/icons/distance.svg" alt="железнодорожный вокзал" />
+										<span>Железнодорожный вокзал</span>
+									</div>
+								</div>
+							</div>
+							<a class="location__contacts-btn" href="/contacts.html">Позвонить на ресепшн</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="nearby">
+				<div class="nearby__container">
+					<div class="nearby__wrapper">
+						<h3 class="nearby__title">У нас в гостях, вы будете рядом</h3>
+						<div class="nearby__items">
+							<div class="nearby__item">
+								<span class="nearby__distance">15</span>
+								<span class="nearby__unit">Км</span>
+								<p class="nearby__description">Аэропорт Толмачево</p>
+							</div>
+							<div class="nearby__item item__second">
+								<span class="nearby__distance">1.9</span>
+								<span class="nearby__unit">Км</span>
+								<p class="nearby__description">Театр Оперы и балета</p>
+							</div>
+							<div class="nearby__item--last">
+								<span class="nearby__distance">500</span>
+								<span class="nearby__unit"> М</span>
+								<p class="nearby__description--last">Главный железнодорожный вокзал</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="service">
+				<div class="service__container container">
+					<div class="service__wrapper">
+						<h2 class="service__title">Дополнительные услуги</h2>
+						<div class="service__items-wrapper">
+							<!-- slider -->
+							<div class="service__slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="service__item">
+											<div class="service__img-container">
+												<img src="./img/content/passage.jpg" alt="отель" />
+											</div>
+											<div class="service__description">
+												<h4 class="service__item-title">События в отеле</h4>
+												<p class="service__text">
+													С другой стороны, экономическая повестка сегодняшнего дня напрямую зависит от
+													инновационных
+													методов управления процессами. Каждый из нас понимает очевидную вещь: новая
+													модель
+													организационной
+													деятельности напрямую зависит от существующих финансовых и административных
+													условий.
+												</p>
+												<a class="service__link" href="#">Подробнее</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="service__item">
+											<div class="service__img-container">
+												<img src="./img/content/restaurant.jpg" alt="ресторан" />
+											</div>
+											<div class="service__description">
+												<h4 class="service__item-title">Ресторан</h4>
+												<p class="service__text">
+													Но сложившаяся структура организации требует определения и уточнения новых
+													предложений.
+													Следует
+													отметить, что убеждённость некоторых оппонентов играет определяющее значение для
+													прогресса
+													профессионального сообщества.
+												</p>
+												<a class="service__link" href="#">Подробнее</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="service__item">
+											<div class="service__img-container">
+												<img src="./img/content/conference.jpg" alt="конференц зал" />
+											</div>
+											<div class="service__description">
+												<h4 class="service__item-title">Конференц-зал</h4>
+												<p class="service__text">
+													Мы вынуждены отталкиваться от того, что укрепление и развитие внутренней
+													структуры не
+													оставляет
+													шанса для системы массового участия! Активно развивающиеся страны третьего мира в
+													равной
+													степени
+													предоставлены сами себе. Явные признаки победы институционализации неоднозначны и
+													будут
+													подвергнуты целой серии независимых исследований.
+												</p>
+												<a class="service__link" href="#">Подробнее</a>
+											</div>
+										</div>
+
+									</div>
+									<div class="swiper-slide">
+										<div class="service__item">
+											<div class="service__img-container">
+												<img src="./img/content/restaurant.jpg" alt="ресторан" />
+											</div>
+											<div class="service__description">
+												<h4 class="service__item-title">Ресторан</h4>
+												<p class="service__text">
+													Но сложившаяся структура организации требует определения и уточнения новых
+													предложений.
+													Следует
+													отметить, что убеждённость некоторых оппонентов играет определяющее значение для
+													прогресса
+													профессионального сообщества.
+												</p>
+												<a class="service__link" href="#">Подробнее</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="service__item">
+											<div class="service__img-container">
+												<img src="./img/content/conference.jpg" alt="конференц зал" />
+											</div>
+											<div class="service__description">
+												<h4 class="service__item-title">Конференц-зал</h4>
+												<p class="service__text">
+													Мы вынуждены отталкиваться от того, что укрепление и развитие внутренней
+													структуры не
+													оставляет
+													шанса для системы массового участия! Активно развивающиеся страны третьего мира в
+													равной
+													степени
+													предоставлены сами себе. Явные признаки победы институционализации неоднозначны и
+													будут
+													подвергнуты целой серии независимых исследований.
+												</p>
+												<a class="service__link" href="#">Подробнее</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="service__item">
+											<div class="service__img-container">
+												<img src="./img/content/passage.jpg" alt="отель" />
+											</div>
+											<div class="service__description">
+												<h4 class="service__item-title">События в отеле</h4>
+												<p class="service__text">
+													С другой стороны, экономическая повестка сегодняшнего дня напрямую зависит от
+													инновационных
+													методов управления процессами. Каждый из нас понимает очевидную вещь: новая
+													модель
+													организационной
+													деятельности напрямую зависит от существующих финансовых и административных
+													условий.
+												</p>
+												<a class="service__link" href="#">Подробнее</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="service-button-prev"></div>
+								<div class="service-button-next"></div>
+							</div>
+							<!-- slider -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="questions">
+				<div class="questions__container container">
+					<div class="questions__wrapper">
+						<form id="questions-form" action="#" method="post" class="questions__form">
+							<h3 class="questions__form-title">Остались вопросы</h3>
+							<div class="questions__form-item">
+								<input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
+							</div>
+							<div class="questions__form-item">
+								<input type="number" id="phone" name="phone" class="questions__form-input"
+									placeholder="Телефон" />
+							</div>
+							<div class="questions__form-item">
+								<textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
+									placeholder="Комментарий, если есть"></textarea>
+							</div>
+							<button type="submit" class="questions__form-btn">
+								Получить ответ
+							</button>
+							<p class="questions__form-note">
+								Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
+								<a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
+							</p>
+						</form>
+						<div class="questions__callback">
+							<div class="questions__callback-wrapper">
+								<p class="questions__callback-text">Телефон обратной связи</p>
+								<p class="questions__callback-phone">+7 (383) 355 99 93</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm') @@include('html/_scroll.htm') @@include('html/_modal.htm')
+	</div>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

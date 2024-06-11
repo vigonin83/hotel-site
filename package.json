@@ -1,0 +1,54 @@
+{
+  "name": "hotel-site",
+  "version": "1.0.0",
+  "description": "html, scss, js, gulp, swiper",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "dev": "gulp",
+    "clean": "gulp cleanDist",
+    "build": "gulp build --build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "scss, js, gulp"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Vasiliy Igonin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "css-loader": "^7.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.77.0",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "swiper": "^11.1.1"
+  }
+}

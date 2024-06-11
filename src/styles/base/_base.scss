@@ -1,0 +1,15 @@
+@import './vars';
+
+.app__wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+

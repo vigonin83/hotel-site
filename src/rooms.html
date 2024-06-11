@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./styles/index.css" />
+   <title>Отель | Каталог номеров</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_mobileMenu.htm')
+      <main id="main" class="main">
+         <section class="rooms-catalog">
+            <div class="breadcrumbs__container">
+               <ul class="promotions__breadcrumbs breadcrumbs">
+                  <li class="breadcrumbs__item">
+                     <a href="/" class="breadcrumbs__main-link">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__item breadcrumbs__current-page">
+                     Номера
+                  </li>
+               </ul>
+            </div>
+            <div class="rooms-catalog__container roons-catalog__page-container">
+               <h2 class="rooms__title page-title">Номера</h2>
+               <div class="rooms-catalog__wrapper">
+                  <aside class="rooms-catalog__filter filter-rooms">
+                     <div class="filter-rooms__wrapper">
+                        <div class="filter-rooms__form">
+                           <h2 class="filter-rooms__title">Номера</h2>
+                           <div class="filter-rooms__price">
+                              <label for="price">Цена: 7 000 &#8381;</label>
+                              <input type="range" id="price" name="price" min="8000" max="20000" value="4000"
+                                 step="1000" />
+                              <div class="filter-rooms__item-wrapper">
+                                 <span>800 &#8381;</span>
+                                 <span>20 000 &#8381;</span>
+                              </div>
+                           </div>
+                           <div class="filter-rooms__popularity">
+                              <label for="popularity">Популярность: 2</label>
+                              <input type="range" id="popularity" name="popularity" min="0" max="5" value="4"
+                                 step="1" />
+                              <div class="filter-rooms__item-wrapper">
+                                 <span>0</span>
+                                 <span>5</span>
+                              </div>
+                           </div>
+                           <div class="filter-rooms__beds">
+                              <label for="popularity">Места: 3</label>
+                              <input type="range" id="beds" name="beds" min="1" max="8" value="2" step="1" />
+                              <div class="filter-rooms__item-wrapper">
+                                 <span>1</span>
+                                 <span>8</span>
+                              </div>
+                           </div>
+                           <button class="filter-rooms__reset">Очистить фильтр</button>
+                        </div>
+                     </div>
+                  </aside>
+                  <div class="room-card__container">
+                     <div class="room-card__wrapper">
+                        <div class="room-card__item">
+                           <div class="room-card__content">
+                              <div class="room-card__content-top">
+                                 <h4 class="room-card__type-title">Общий номер</h4>
+                                 <div class="room-card__rating">
+                                    <ul class="room-card__stars">
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                    </ul>
+                                    <span class="room-card__rate" data-set="5.0">5.0</span>
+                                 </div>
+                              </div>
+                              <div class="room-card__content-bottom">
+                                 <div class="room-card__bed-qty">
+                                    <div class="room-card__qty-title">
+                                       <img src="./img/icons/guest.svg" alt="места" />
+                                       <span>Места</span>
+                                    </div>
+                                    <span class="room-card__bed-number">4-6</span>
+                                 </div>
+                                 <p class="room-card__price">900 &#8381;</p>
+                                 <a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="room-card__img-container">
+                              <img class="room-card__img" src="./img/content/06.png" alt="комната" />
+                           </div>
+                        </div>
+                        <div class="room-card__item">
+                           <div class="room-card__content">
+                              <div class="room-card__content-top">
+                                 <h4 class="room-card__type-title">Стандартный улучшенный</h4>
+                                 <div class="room-card__rating">
+                                    <ul class="room-card__stars">
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                    </ul>
+                                    <span class="room-card__rate" data-set="5.0">5.0</span>
+                                 </div>
+                              </div>
+                              <div class="room-card__content-bottom">
+                                 <div class="room-card__bed-qty">
+                                    <div class="room-card__qty-title">
+                                       <img src="./img/icons/guest.svg" alt="места" />
+                                       <span>Места</span>
+                                    </div>
+                                    <span class="room-card__bed-number">1-2</span>
+                                 </div>
+                                 <p class="room-card__price">3 700 &#8381;</p>
+                                 <a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="room-card__img-container">
+                              <img class="room-card__img" src="./img/content/02.png" alt="комната" />
+                           </div>
+
+                        </div>
+                        <div class="room-card__item">
+                           <div class="room-card__content">
+                              <div class="room-card__content-top">
+                                 <h4 class="room-card__type-title">Стандарт</h4>
+                                 <div class="room-card__rating">
+                                    <ul class="room-card__stars">
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                    </ul>
+                                    <span class="room-card__rate" data-set="5.0">5.0</span>
+                                 </div>
+                              </div>
+                              <div class="room-card__content-bottom">
+                                 <div class="room-card__bed-qty">
+                                    <div class="room-card__qty-title">
+                                       <img src="./img/icons/guest.svg" alt="места" />
+                                       <span>Места</span>
+                                    </div>
+                                    <span class="room-card__bed-number">1-2</span>
+                                 </div>
+                                 <p class="room-card__price">2 600 &#8381;</p>
+                                 <a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="room-card__img-container">
+                              <img class="room-card__img" src="./img/content/03.png" alt="комната" />
+                           </div>
+
+                        </div>
+                        <div class="room-card__item">
+                           <div class="room-card__content">
+                              <div class="room-card__content-top">
+                                 <h4 class="room-card__type-title">Стандарт</h4>
+                                 <div class="room-card__rating">
+                                    <ul class="room-card__stars">
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                    </ul>
+                                    <span class="room-card__rate" data-set="5.0">5.0</span>
+                                 </div>
+                              </div>
+                              <div class="room-card__content-bottom">
+                                 <div class="room-card__bed-qty">
+                                    <div class="room-card__qty-title">
+                                       <img src="./img/icons/guest.svg" alt="места" />
+                                       <span>Места</span>
+                                    </div>
+                                    <span class="room-card__bed-number">1-2</span>
+                                 </div>
+                                 <p class="room-card__price">2 600 &#8381;</p>
+                                 <a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="room-card__img-container">
+                              <img class="room-card__img" src="./img/content/04.png" alt="номер" />
+                           </div>
+                        </div>
+                        <div class="room-card__item">
+                           <div class="room-card__content">
+                              <div class="room-card__content-top">
+                                 <h4 class="room-card__type-title">Люкс</h4>
+                                 <div class="room-card__rating">
+                                    <ul class="room-card__stars">
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                    </ul>
+                                    <span class="room-card__rate" data-set="5.0">5.0</span>
+                                 </div>
+                              </div>
+                              <div class="room-card__content-bottom">
+                                 <div class="room-card__bed-qty">
+                                    <div class="room-card__qty-title">
+                                       <img src="./img/icons/guest.svg" alt="места" />
+                                       <span>Места</span>
+                                    </div>
+                                    <span class="room-card__bed-number">1-2</span>
+                                 </div>
+                                 <p class="room-card__price">10 200 &#8381;</p>
+                                 <a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="room-card__img-container">
+                              <img class="room-card__img" src="./img/content/05.png" alt="номер" />
+                           </div>
+
+                        </div>
+                        <div class="room-card__item">
+                           <div class="room-card__content">
+                              <div class="room-card__content-top">
+                                 <h4 class="room-card__type-title">Семейный номер</h4>
+                                 <div class="room-card__rating">
+                                    <ul class="room-card__stars">
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                       <li class="room-card__star-item">
+                                          <img src="./img/icons/star-full.png" alt="рейтинг" />
+                                       </li>
+                                    </ul>
+                                    <span class="room-card__rate" data-set="5.0">5.0</span>
+                                 </div>
+                              </div>
+                              <div class="room-card__content-bottom">
+                                 <div class="room-card__bed-qty">
+                                    <div class="room-card__qty-title">
+                                       <img src="./img/icons/guest.svg" alt="места" />
+                                       <span>Места</span>
+                                    </div>
+                                    <span class="room-card__bed-number">1-4</span>
+                                 </div>
+                                 <p class="room-card__price">8 800 &#8381;</p>
+                                 <a href="./room-card.html" class="room-card__link-btn">Подробнее</a>
+                              </div>
+                           </div>
+                           <div class="room-card__img-container">
+                              <img class="room-card__img" src="./img/content/06.png" alt="номер" />
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="questions">
+            <div class="questions__container container">
+               <div class="questions__wrapper">
+                  <form id="questions-form" action="#" method="post" class="questions__form">
+                     <h3 class="questions__form-title">Остались вопросы</h3>
+                     <div class="questions__form-item">
+                        <input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
+                     </div>
+                     <div class="questions__form-item">
+                        <input type="number" id="phone" name="phone" class="questions__form-input"
+                           placeholder="Телефон" />
+                     </div>
+                     <div class="questions__form-item">
+                        <textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
+                           placeholder="Комментарий, если есть"></textarea>
+                     </div>
+                     <button type="submit" class="questions__form-btn">
+                        Получить ответ
+                     </button>
+                     <p class="questions__form-note">
+                        Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
+                        <a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
+                     </p>
+                  </form>
+                  <div class="questions__callback">
+                     <div class="questions__callback-wrapper">
+                        <p class="questions__callback-text">Телефон обратной связи</p>
+                        <p class="questions__callback-phone">+7 (383) 355 99 93</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm') @@include('html/_scroll.htm') @@include('html/_modal.htm')
+   </div>
+   <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+html {
+   line-height: 1.15;
+   -webkit-text-size-adjust: 100%;
+   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+body {
+   height: 100%;
+   margin: 0;
+   overflow-x: hidden;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+ul li {
+   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
+p {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+button {
+   cursor: pointer;
+   display: inline-block;
+   font-size: inherit;
+   border: none;
+}
+
+input, textarea::placeholder {
+   font-family: inherit;
+}

@@ -1,0 +1,323 @@
+@import '../base/vars';
+
+.breadcrumbs__container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: toRem(15) toRem(10) toRem(0);
+}
+
+.rooms-catalog {
+   position: relative;
+   background-color: #e46f2b09;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      box-shadow: -130px 0px 36px 510px #e46f2b12;
+      z-index: 0;
+   }
+}
+
+.rooms-catalog__container {
+   max-width: 1522px;
+   margin: 0 auto;
+   padding: 0 11px 4rem;
+   position: relative;
+   top: -1rem;
+   z-index: 2;
+
+   @media (max-width: $mobile) {
+      @include adaptiveValueMobile('max-width', 787, 590);
+      padding: toRem(16) toRem(10) toRem(0);
+      top: 0;
+   }
+
+   @media (max-width: $smallMobile) {
+      @include adaptiveValueSMobile('max-width', 590, 395);
+   }
+}
+
+.roons-catalog__page-container {
+   padding-top: toRem(15);
+   @media (max-width: $tablet) {
+      padding-top: toRem(35);
+   }
+}
+
+.rooms-catalog__wrapper {
+   display: flex;
+   gap: 0 toRem(16);
+
+   @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: toRem(16) 0;
+   }
+}
+
+.rooms-catalog__filter {
+   flex: 0 0 toRem(180);
+   background-color: $whiteColor2;
+   padding: 0.8rem toRem(10);
+   max-height: toRem(273);
+   position: relative;
+   z-index: 2;
+
+   @media (max-width: $mobile) {
+      width: 50%;
+      align-self: center;
+   }
+}
+
+.filter-rooms__title {
+   font-size: 1.2rem;
+   line-height: 1;
+   margin-bottom: 0.7rem;
+}
+
+.filter-rooms__form div {
+   margin-bottom: 1.2rem;
+
+   & div:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.filter-rooms__form {
+   & .filter-rooms__beds {
+      margin-bottom: 0.5rem;
+   }
+}
+
+.filter-rooms__form label {
+   display: block;
+   font-size: 0.78rem;
+   font-weight: 500;
+}
+
+.filter-rooms__form input[type="range"] {
+   appearance: none;
+   background-color: #FDD97E;
+   height: 0.5px;
+   border-radius: 3px;
+   cursor: pointer;
+   width: 100%;
+
+   &:focus {
+      outline: none;
+   }
+
+   &::-webkit-slider-thumb {
+      appearance: none;
+      width: 0;
+      height: 0;
+      border-top: 0.9rem solid #FDD97E;
+      border-right: 0.5rem solid transparent;
+      border-left: 0.5rem solid transparent;
+   }
+
+   &::-moz-range-thumb {
+      appearance: none;
+      width: 0;
+      height: 0;
+      border-top: 0.9rem solid #FDD97E;
+      border-right: 0.5rem solid transparent;
+      border-left: 0.5rem solid transparent;
+   }
+
+}
+
+.filter-rooms__form span {
+   font-size: 0.7rem;
+   font-weight: 700;
+}
+
+.filter-rooms__item-wrapper {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 0.4rem;
+}
+
+.filter-rooms__reset {
+   display: inline-block;
+   text-decoration: underline;
+   padding: 0;
+   background-color: transparent;
+   border: none;
+   color: $mainColor;
+   font-size: 0.75rem;
+   font-weight: 500;
+}
+
+
+.room-card__wrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: toRem(16);
+
+   @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+.room-card__item {
+   display: flex;
+   justify-content: space-between;
+   background-color: $whiteColor2;
+   height: 273px;
+}
+
+.room-card__item:nth-child(odd) {
+   @media (max-width: $tablet) {
+      display: none;
+   }
+}
+
+.room-card__content {
+   flex: 1 1 30%;
+   padding: 0.8rem 0.2rem 1rem 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.room-card__type-title {
+   font-size: toRem(16);
+   margin-bottom: toRem(2);
+   line-height: 1;
+}
+
+.room-card__rating {
+   display: inline-flex;
+   justify-content: center;
+   gap: 0 1rem;
+}
+
+.room-card__stars {
+   display: flex;
+   justify-content: space-between;
+   gap: 0 0.2rem;
+}
+
+.room-card__star-item img {
+   width: 0.8rem;
+}
+
+.room-card__rate {
+   font-size: 0.9rem;
+   font-weight: 500;
+}
+
+.room-card__bed-qty {
+   display: inline-flex;
+   gap: 0 1.3rem;
+   font-size: 0.75rem;
+   font-weight: 300;
+   color: $fontColor;
+   display: flex;
+   margin-bottom: 8px;
+}
+
+.room-card__qty-title img {
+   display: inline-block;
+   margin-right: 0.3rem;
+   width: 0.55rem;
+}
+
+.room-card__bed-number {
+   font-weight: 700;
+}
+
+.room-card__price {
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: $mainColor;
+   margin-bottom: 5px;
+}
+
+.room-card__link-btn {
+   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+   @include link-btn ($mainColor, $whiteColor2, $whiteColor2);
+   width: 110%;
+   font-size: 0.8rem;
+   font-weight: 500;
+
+   &::before {
+      content: '';
+      height: 2rem;
+      width: 3px;
+   }
+}
+
+.room-card__img-container {
+   flex: 0 2 70%;
+}
+
+.room-card__img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: left center;
+}
+
+
+.rooms-catalog__link-container {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   gap: 0 toRem(25);
+   align-items: center;
+   bottom: 0;
+   right: 0;
+   transform: translateY(60%);
+   background-color: $whiteColor2;
+   padding: toRem(15);
+   width: toRem(767);
+
+   @media (max-width: $tablet) {
+      width: toRem(543);
+      gap: 0 toRem(15);
+   }
+
+   @media (max-width: $mobile) {
+      position: static;
+      transform: none;
+      width: 100%;
+      flex-direction: column;
+      gap: toRem(15) 0;
+   }
+}
+
+.rooms-catalog__link-btn {
+   padding: toRem(41) toRem(10) toRem(41) toRem(41);
+   @include link-btn ($mainColor, $whiteColor2, $whiteColor2);
+   flex: 1 1 48%;
+
+   @media (max-width: $mobile) {
+      width: 100%;
+   }
+
+   @media (max-width: $smallMobile) {
+      padding: toRem(34) toRem(10) toRem(34) toRem(34);
+   }
+}
+
+.rooms-catalog__prompt {
+   flex: 1 1 52%;
+   font-size: 0.57rem;
+   color: $fontColorBtn;
+   font-weight: 500;
+
+   @media (max-width: $tablet) {
+      flex: 1 1 46%;
+   }
+
+   @media (max-width: $mobile) {
+      width: 100%;
+      order: -1;
+      text-align: center;
+      font-size: toRem(12);
+      font-weight: 400;
+   }
+}

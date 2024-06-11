@@ -1,0 +1,131 @@
+@import '../base/vars';
+
+.benefits {
+   background-image: url(../../img/backgrounds/alpha-white.png);
+   background-color: $mainColor;
+   background-size: 65%;
+   background-position: right -160px center;
+   background-repeat: no-repeat;
+   color: $whiteColor;
+
+   @media (max-width: $tablet) {
+      background-image: none;
+   }
+}
+
+.benefits__container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: toRem(85) toRem(10) toRem(36);
+
+   @media (max-width: $tablet) {
+      @include adaptiveValueMobile('max-width', 787, 590);
+   }
+
+   @media (max-width: $smallMobile) {
+      @include adaptiveValueSMobile('max-width', 590, 395);
+      padding-top: toRem(30);
+      padding-bottom: toRem(20);
+   }
+}
+
+.benefits__wrapper {
+   max-width: toRem(740);
+
+   @media (max-width: $tablet) {
+      max-width: 100%;
+   }
+}
+
+.benefits__title {
+   @include title;
+   font-weight: 700;
+   line-height: 0.9;
+   margin-bottom: 48px;
+}
+
+.benefits__items {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 28px 10px;
+   max-width: 400px;
+   justify-content: center;
+   font-size: 0.78rem;
+   margin-bottom: 38px;
+
+   @media (max-width: $mobile) {
+      max-width: 100%;
+   }
+
+   @media (max-width: $smallMobile) {
+      grid-template-columns: 1fr;
+      font-size: toRem(18);
+      font-weight: 500;
+   }
+}
+
+.benefits__item {
+   display: flex;
+   gap: 0 0.8rem;
+}
+
+.benefits__img-box {
+   width: 100%;
+   max-width: 2rem;
+
+   @media (max-width: $smallMobile) {
+      max-width: toRem(50);
+   }
+}
+
+.benefits__img {
+   display: block;
+   margin: 0 auto;
+   max-width: 1.9rem;
+   max-height: 2.2rem;
+
+   @media (max-width: $smallMobile) {
+      max-width: 2.9rem;
+      height: fit-content;
+   }
+
+}
+
+.benefits__notes {
+   font-size: 0.65rem;
+   font-weight: 400;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(14);
+      font-weight: 300;
+      margin-bottom: toRem(30);
+   }
+}
+
+.benefits__note-text {
+   margin-bottom: 9px;
+}
+
+.benefits__note-text:last-of-type {
+   margin-bottom: 12px;
+}
+
+.benefits__link-btn {
+   padding: toRem(41) 11.5rem toRem(41) toRem(41);
+   @include link-btn ($whiteColor2, $fontColorBtn, $mainColor);
+
+   @media (max-width: $mobile) {
+      width: 100%;
+   }
+
+   @media (max-width: $smallMobile) {
+      padding: toRem(34) toRem(10) toRem(34) toRem(34);
+      font-size: toRem(14);
+
+      &::before {
+         height: toRem(42);
+      }
+
+   }
+}

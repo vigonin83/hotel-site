@@ -1,0 +1,65 @@
+@import '../base/vars';
+
+.promo__container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: toRem(15) toRem(10) toRem(55);
+
+   @media (max-width: $tablet) {
+      @include adaptiveValueMobile('max-width', 787, 590);
+      margin-top: toRem(20);
+   }
+
+   @media (max-width: $smallMobile) {
+      @include adaptiveValueSMobile('max-width', 590, 395);
+      padding-bottom: toRem(30);
+   }
+}
+
+.promo__breadcrumbs {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding:  toRem(15) toRem(10);
+}
+
+.promo__img-container {
+   height: 415px;
+   margin-bottom: toRem(25);
+}
+
+.promo__img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: left center;
+}
+
+.promo__item {
+   max-width: 60%;
+   margin: 0 auto;
+   @media (max-width: $tablet) {
+      max-width: 100%;
+   }
+}
+
+.promo__item-title {
+   font-size: toRem(46);
+   margin-bottom: toRem(25);
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(24);
+   }
+}
+
+.promo__item-text {
+   font-size: toRem(15);
+   font-weight: 500;
+   line-height: 1.6;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(12);
+   }
+   & p {
+      margin-bottom: toRem(25);
+   }
+}

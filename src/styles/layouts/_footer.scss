@@ -1,0 +1,457 @@
+@import '../base/vars';
+@import '../base/base';
+
+.footer {
+   background: $footerColor;
+   color: $whiteColor;
+}
+
+.footer__container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: toRem(30) toRem(10) toRem(42);
+
+   @media (max-width: $tablet) {
+      @include adaptiveValueMobile('max-width', 787, 590)
+   }
+
+   @media (max-width: $smallMobile) {
+      position: relative;
+      padding: toRem(15) toRem(10) toRem(18);
+      @include adaptiveValueSMobile('max-width', 590, 395)
+   }
+}
+
+.footer__wrapper {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: toRem(15);
+   text-wrap: nowrap;
+
+   @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+         "first second"
+         "third fourth";
+   }
+
+   @media (max-width: $smallMobile) {
+      margin-bottom: toRem(130);
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+         "first"
+         "second"
+         "third"
+         "fourth";
+   }
+}
+
+.menu__list {
+   @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      line-height: 1;
+      gap: toRem(10) toRem(30);
+      margin-top: toRem(30);
+   }
+
+   @media (max-width: $smallMobile) {
+      margin-top: toRem(38);
+      gap: toRem(20) 0;
+      margin-bottom: toRem(50);
+      position: absolute;
+      top: -300%;
+      left: -300%;
+      visibility: hidden;
+      opacity: 0;
+      transition: $mainTransition;
+   }
+}
+
+// ! add JS class when clic open accordeon item
+
+.menu__list.-open {
+   position: static;
+   visibility: visible;
+   opacity: 1;
+}
+
+.menu__list li {
+   display: block;
+   margin-bottom: 8px;
+
+   @media (max-width: $tablet) {
+      margin-bottom: 0;
+   }
+}
+
+.relation {
+   @media (max-width: $tablet) {
+      grid-area: first;
+   }
+
+   @media (max-width: $smallMobile) {
+      justify-self: left;
+   }
+
+}
+
+.relation__contacts {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: toRem(15);
+
+   @media (max-width: $smallMobile) {
+      display: flex;
+      margin-bottom: toRem(20);
+   }
+}
+
+.relation__phone {
+   font-size: 1.25rem;
+   line-height: 1;
+   font-weight: 400;
+   text-wrap: nowrap;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(22);
+   }
+}
+
+.relation__email {
+   font-size: 0.7rem;
+   line-height: 2;
+
+   @media (max-width: $smallMobile) {
+      order: -1;
+      font-size: toRem(15);
+      line-height: 1.3;
+      margin-bottom: toRem(10);
+   }
+}
+
+.relation__social-list {
+   display: flex;
+   justify-content: flex-start;
+   gap: 0 toRem(20);
+
+   @media (max-width: $smallMobile) {
+      position: absolute;
+      bottom: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 0 toRem(30);
+   }
+}
+
+.relation__social-list img {
+   width: 1.5rem;
+
+   @media (max-width: $tablet) {
+      width: toRem(32);
+   }
+}
+
+.footer__nav {
+   display: flex;
+   justify-content: space-around;
+   gap: 0 toRem(15);
+   font-size: toRem(12.8);
+   font-weight: 400;
+
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      grid-area: second;
+      justify-self: end;
+      margin-right: toRem(50);
+      gap: toRem(30);
+   }
+
+   @media (max-width: $smallMobile) {
+      width: 100%;
+      margin-left: 0;
+      justify-self: left;
+      gap: toRem(35);
+      margin-right: 0;
+      font-size: toRem(15);
+   }
+}
+
+.relation__title,
+.nav__booking-title,
+.menu__title {
+   line-height: 0;
+   margin-bottom: 30px;
+   font-size: 0.67rem;
+   font-weight: 300;
+}
+
+.menu__title {
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(35);
+   }
+}
+
+.menu__title.menu__title_hidden {
+   @media (max-width: $smallMobile) {
+      margin: 0;
+   }
+}
+
+.details-title {
+   opacity: 0;
+   visibility: hidden;
+}
+
+.menu__title.title-info,
+.menu__title.details-title {
+   @media (max-width: $smallMobile) {
+      opacity: 1;
+      visibility: visible;
+      font-size: toRem(20);
+      font-weight: 700;
+      position: relative;
+      line-height: 0.3;
+      cursor: pointer;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 150px;
+         border-top: toRem(12) solid $whiteColor;
+         border-right: toRem(7) solid transparent;
+         border-left: toRem(7) solid transparent;
+         transition: $mainTransition;
+      }
+   }
+}
+
+// ! add JS class when accordeon open
+
+.menu__title.title-info.-rotate,
+.menu__title.details-title.-rotate {
+   @media (max-width: $smallMobile) {
+      &::after {
+         transform: rotateX(180deg);
+      }
+   }
+}
+
+.menu__title.details-title {
+   @media (max-width: $smallMobile) {
+      margin-bottom: toRem(30);
+
+      &::after {
+         left: 245px;
+      }
+   }
+}
+
+.relation__title {
+   margin-bottom: 25px;
+
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(30);
+   }
+
+   @media (max-width: $smallMobile) {
+      display: none;
+   }
+}
+
+.nav__booking-title {
+   @media (max-width: $smallMobile) {
+      display: none;
+   }
+}
+
+.nav__booking-link {
+   @media (max-width: $smallMobile) {
+      @include link-btn (transparent, $whiteColor, $whiteColor);
+      border: 2px solid $whiteColor;
+      padding: toRem(37) toRem(40);
+      min-width: 100%;
+      box-shadow: none;
+      font-weight: 500;
+      font-size: toRem(16);
+
+      @media (max-width: $smallMobile) {
+         padding: toRem(34) toRem(34);
+         font-size: toRem(14);
+
+         &::before {
+            height: toRem(42);
+         }
+      }
+   }
+}
+
+.footer__policy {
+   display: flex;
+   justify-content: space-around;
+   gap: 0 toRem(10);
+   font-size: toRem(12.8);
+
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      grid-area: fourth;
+      justify-self: end;
+   }
+
+   @media (max-width: $smallMobile) {
+      justify-self: left;
+   }
+}
+
+.rules__list {
+   @media (max-width: $tablet) {
+      margin-top: toRem(30);
+      margin-bottom: toRem(10);
+      font-size: toRem(12.8);
+   }
+
+   @media (max-width: $smallMobile) {
+      margin-top: toRem(15);
+      font-size: toRem(15);
+      transition: $mainTransition;
+      position: absolute;
+      top: -300%;
+      left: -300%;
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+// ! add JS class when clic open accordeon item
+
+.rules__list.-open {
+   position: static;
+   visibility: visible;
+   opacity: 1;
+}
+
+.rules__list li {
+   display: block;
+   margin-bottom: 8px;
+
+   @media (max-width: $tablet) {
+      &:not(:last-child) {
+         margin-bottom: toRem(10);
+      }
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   @media (max-width: $smallMobile) {
+      &:not(:last-child) {
+         margin-bottom: toRem(18);
+      }
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+}
+
+.details {
+   @media (max-width: $smallMobile) {
+      order: -1;
+   }
+}
+
+.details__list {
+   @media (max-width: $tablet) {
+      display: flex;
+      justify-content: flex-start;
+      gap: toRem(20);
+      font-size: toRem(12.8);
+   }
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(15);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 0;
+      @include adaptiveValueSMobile('column-gap', 210, 90);
+      transition: $mainTransition;
+      position: absolute;
+      top: -300%;
+      left: -300%;
+      opacity: 0;
+      visibility: hidden;
+
+      & li:last-child {
+         justify-self: right;
+      }
+   }
+}
+
+// ! add JS class when clic open accordeon item
+
+.details__list.-open {
+   position: static;
+   visibility: visible;
+   opacity: 1;
+}
+
+.details__list li {
+   display: block;
+   margin-bottom: 8px;
+
+   @media (max-width: $tablet) {
+      margin-bottom: 0;
+   }
+}
+
+.footer__option-info {
+   text-align: center;
+   font-size: 0.75rem;
+   justify-self: right;
+
+   @media (max-width: $tablet) {
+      grid-area: third;
+      justify-self: left;
+      align-self: self-end;
+   }
+}
+
+.footer__logo {
+   margin: 0 auto;
+   margin-bottom: 15px;
+
+   @media (max-width: $smallMobile) {
+      display: none;
+   }
+}
+
+.footer__logo-img {
+   display: block;
+   margin: 0 auto;
+   width: 3.5rem;
+}
+
+.footer__logo-name {
+   margin-bottom: 3px;
+   font-size: 0.6rem;
+}
+
+.footer__logo-subname {
+   font-size: 0.6rem;
+   font-weight: 700;
+}
+
+.footer__develop {
+   font-weight: 400;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(13);
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%)
+   }
+}

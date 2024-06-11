@@ -1,0 +1,39 @@
+@import '../base/vars';
+
+.scroll {
+   position: fixed;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   bottom: 1.2rem;
+   right: 1.2rem;
+   width: toRem(45);
+   aspect-ratio: 1;
+   cursor: pointer;
+   background-color: rgba(217, 211, 211, 0.681);
+   border-radius: 2px;
+   z-index: 99900;
+   opacity: 0;
+   visibility: hidden;
+   text-align: center;
+   transition: $mainTransition;
+   & span {
+      position: relative;
+      display: block;
+      background-color: #ffb700;
+      width: toRem(30);
+      aspect-ratio: 1;
+      &::before {
+         position: absolute;
+         content: '>';
+         transform: translateX(-50%)  rotateZ(-90deg);
+         color: white;
+         font-size: toRem(25);
+      }
+   }
+}
+
+.scroll.visible {
+   opacity: 1;
+   visibility: visible;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./styles/index.css" />
+   <title>Document</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      @@include('html/_header.htm')
+      @@include('html/_mobileMenu.htm')
+      <main id="main" class="main">
+         <section class="promo">
+            <ul class="promo__breadcrumbs breadcrumbs">
+               <li class="breadcrumbs__item">
+                  <a href="/" class="breadcrumbs__main-link">Главная</a>
+               </li>
+               <li class="breadcrumbs__item">
+                  <a href="/promotions.html" class="breadcrumbs__main-link">Акции</a>
+               </li>
+               <li class="breadcrumbs__item breadcrumbs__current-page">
+                  Бесплатные лимоны каждому гостю
+               </li>
+            </ul>
+            <div class="promo__img-container">
+               <img src="./img/content/prom_01.jpg" alt="Акция" class="promo__img">
+            </div>
+            <div class="promo__container">
+               <div class="promo__item">
+                  <h4 class="promo__item-title">Бесплатные лимоны каждому гостю</h4>
+                  <article class="promo__item-text">
+                     <p>
+                        А также некоторые особенности внутренней политики набирают популярность среди определенных
+                        слоев населения, а значит, должны
+                        быть смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего
+                        возрастает их статус бесполезности. Перспективное планирование играет важную роль в
+                        формировании системы массового участия.
+                     </p>
+                     <p>
+                        Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера
+                        нашей активности в значительной степени обусловливает важность модели развития.
+                        Предварительные выводы неутешительны: высококачественный прототип будущего проекта
+                        обеспечивает актуальность вывода текущих активов
+                     </p>
+                  </article>
+                  <a href="/rooms.html" class="questions__form-btn">
+                     Забронировать номер
+                  </a>
+               </div>
+            </div>
+         </section>
+         <section class="questions">
+            <div class="questions__container container">
+               <div class="questions__wrapper">
+                  <form id="questions-form" action="#" method="post" class="questions__form">
+                     <h3 class="questions__form-title">Остались вопросы</h3>
+                     <div class="questions__form-item">
+                        <input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
+                     </div>
+                     <div class="questions__form-item">
+                        <input type="number" id="phone" name="phone" class="questions__form-input"
+                           placeholder="Телефон" />
+                     </div>
+                     <div class="questions__form-item">
+                        <textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
+                           placeholder="Комментарий, если есть"></textarea>
+                     </div>
+                     <button type="submit" class="questions__form-btn">
+                        Получить ответ
+                     </button>
+                     <p class="questions__form-note">
+                        Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
+                        <a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
+                     </p>
+                  </form>
+                  <div class="questions__callback">
+                     <div class="questions__callback-wrapper">
+                        <p class="questions__callback-text">Телефон обратной связи</p>
+                        <p class="questions__callback-phone">+7 (383) 355 99 93</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm') @@include('html/_scroll.htm') @@include('html/_modal.htm')
+   </div>
+   <script src="js/index.js"></script>
+</body>
+
+</html>

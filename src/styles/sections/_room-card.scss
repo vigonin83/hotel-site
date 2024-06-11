@@ -1,0 +1,732 @@
+@import '../base/vars';
+@import '../base/base';
+
+.room__content-wrapper {
+   display: flex;
+   gap: 0 toRem(20);
+   height: 660px;
+   margin-bottom: toRem(90);
+
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      height: unset;
+      margin-bottom: toRem(40);
+   }
+   @media (max-width: $smallMobile) {
+      margin-bottom: 0;
+   }
+}
+
+.room__content {
+   flex: 0 0 100%;
+}
+
+.room__container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: 0 toRem(10);
+   height: 100%;
+
+   @media (max-width: $tablet) {
+      padding: toRem(15) toRem(10) toRem(10);
+      @include adaptiveValueMobile('max-width', 787, 590)
+   }
+
+   @media (max-width: $smallMobile) {
+      @include adaptiveValueSMobile('max-width', 590, 395);
+      padding-top: toRem(12);
+      padding-bottom: toRem(25);
+   }
+
+}
+
+.room__body {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   @media (max-width: $tablet) {
+      width: 100%;
+      margin: 0 auto;
+      gap: toRem(30) 0;
+   }
+}
+
+.room__title {
+   @include title;
+   line-height: 0.9;
+   margin-bottom: toRem(20);
+   letter-spacing: -2px;
+
+   @media (max-width: $tablet) {
+      font-size: toRem(40);
+   }
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(24);
+   }
+}
+
+.room__notes-wrapper {
+   display: flex;
+   justify-content: flex-start;
+   gap: 0 toRem(18);
+   margin-bottom: toRem(20);
+   max-width: 80%;
+   font-size: toRem(14);
+   font-weight: 300;
+   line-height: 1;
+   align-items: baseline;
+}
+
+.room-card__rating.room-add__rating {
+   @media (max-width: $tablet) {
+      position: absolute;
+      top: -160%;
+   }
+
+   @media (max-width: $mobile) {
+      top: -240%;
+   }
+
+   @media (max-width: $smallMobile) {
+      gap: 0 toRem(10);
+      top: -210%;
+   }
+}
+
+.room__rating {
+   display: flex;
+   gap: 0 toRem(8);
+   align-items: baseline;
+}
+
+.room__rate,
+.room__bed-number,
+.room__square-number {
+   font-size: toRem(15);
+   font-weight: 700;
+}
+
+.room__bed-qty,
+.room__square-qty {
+   display: flex;
+   align-items: baseline;
+   gap: 0 toRem(8);
+   white-space: nowrap;
+}
+
+.room__bed-qty img {
+   height: toRem(12);
+}
+
+.room__square-qty {
+   margin-left: toRem(15);
+   position: relative;
+
+   &::after {
+      content: '';
+      width: toRem(10);
+      top: 50%;
+      transform: translateY(-50%);
+      left: -15%;
+      background: transparent;
+      height: toRem(10);
+      position: absolute;
+      border: 0.3px solid rgb(144, 144, 144);
+   }
+}
+
+.room__images-container {
+   flex: 0 0 50%;
+   transform: translateX(-100%);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: toRem(12) 0;
+
+   @media (max-width: $tablet) {
+      transform: translateX(0);
+      order: -1;
+      padding: toRem(10);
+   }
+
+   @media (max-width: $smallMobile) {
+      gap: toRem(8) 0;
+   }
+}
+
+.room__image-main {
+   flex-basis: 70%;
+   height: toRem(450);
+
+   @media (max-width: $tablet) {
+      flex-basis: 0;
+      height: 320px;
+   }
+
+}
+
+.room__image-main img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.room__images-row {
+   flex-basis: auto;
+   display: flex;
+   justify-content: space-between;
+   gap: 0 toRem(12);
+   height: 30%;
+
+   @media (max-width: $tablet) {
+      height: 150px;
+   }
+
+   @media (max-width: $smallMobile) {
+      gap: 0 toRem(8);
+
+   }
+}
+
+.room__images-item {
+   flex-basis: 33%;
+   height: 100%;
+
+   & img {
+      width: 100%;
+      display: inline-block;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+   }
+}
+
+.room__text {
+   font-size: toRem(12);
+   line-height: 1.5;
+   max-width: 80%;
+
+   @media (max-width: $tablet) {
+      max-width: 100%;
+   }
+}
+
+
+.room__content-bottom {
+   max-width: 80%;
+
+   @media (max-width: $tablet) {
+      max-width: 100%;
+   }
+}
+
+.room__service {
+   margin-bottom: toRem(20);
+}
+
+.room__service-notes {
+   display: inline-block;
+   margin-bottom: toRem(10);
+   font-size: toRem(12);
+   font-weight: 300;
+
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(20);
+   }
+}
+
+.service-checkbox {
+   font-size: toRem(11);
+   font-weight: 700;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: toRem(16);
+}
+
+.service-checkbox__item {
+   display: flex;
+   align-items: center;
+   gap: 0 toRem(3);
+}
+
+.service-checkbox__label {
+   display: inline-flex;
+   align-items: center;
+   transform: translateX(10%);
+
+   &:before {
+      content: '✔';
+      transform: translateX(-50%);
+      width: 18px;
+      height: 18px;
+      font-size: toRem(14);
+      border: 2px solid $mainColor;
+      border-radius: 1px;
+      text-align: center;
+   }
+
+}
+
+.service-checkbox__input {
+   position: absolute;
+   z-index: -1;
+   visibility: hidden;
+}
+
+.room__price {
+   font-size: toRem(36);
+   font-weight: 700;
+   color: $mainColor;
+   line-height: 1;
+   margin-bottom: toRem(22);
+}
+
+.room__link-btn {
+   padding: toRem(41) toRem(41) toRem(50);
+   width: 100%;
+   @include link-btn ($mainColor, $whiteColor2, $whiteColor2);
+
+   @media (max-width: $smallMobile) {
+      padding: toRem(34);
+      font-size: toRem(14);
+
+      &::before {
+         height: toRem(42);
+      }
+   }
+
+}
+
+.room__info-container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: toRem(50) toRem(10) toRem(80);
+   background-color: $whiteColor;
+
+   @media (max-width: $tablet) {
+      @include adaptiveValueMobile('max-width', 787, 590)
+   }
+
+   @media (max-width: $smallMobile) {
+      @include adaptiveValueSMobile('max-width', 590, 395);
+      padding-top: toRem(15);
+      padding-bottom: toRem(40);
+   }
+}
+
+.room__info-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   font-size: toRem(12);
+
+   @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.room__info-item.equipment {
+   margin-bottom: toRem(50);
+   @media (max-width: $smallMobile) {
+      margin-bottom: toRem(25);
+   }
+}
+
+.room__info-item.rules {
+   margin-bottom: toRem(30);
+   @media (max-width: $smallMobile) {
+      margin-bottom: toRem(15);
+   }
+}
+
+.room__info-title {
+   font-size: toRem(21);
+   font-weight: 700;
+   white-space: nowrap;
+   margin-bottom: toRem(25);
+}
+
+.equipment__wrapper {
+   display: flex;
+   justify-content: flex-start;
+   gap: 0 toRem(45);
+   @media (max-width: $tablet) {
+      gap: 0 toRem(80);
+   }
+   @media (max-width: $smallMobile) {
+      flex-direction: column;
+      gap: toRem(25) 0;
+   }
+
+   & p {
+      font-size: toRem(15);
+      font-weight: 500;
+      margin-bottom: toRem(16);
+   }
+
+   & li {
+      line-height: 1.5;
+      white-space: nowrap;
+
+   }
+}
+
+.equipment__wrapper-list {
+   @media (max-width: $tablet) {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 toRem(40);
+   }
+   @media (max-width: $smallMobile) {
+      justify-content: start;
+   }
+}
+
+.room__rules {
+   & li {
+      margin-bottom: toRem(10);
+   }
+}
+
+.room__rules {
+   & a {
+      color: $mainColor;
+      text-decoration: underline;
+      font-weight: 700;
+   }
+}
+
+.feedback__slider {
+   height: 100%;
+   overflow: hidden;
+   width: 320px;
+   position: relative;
+
+   @media (max-width: $tablet) {
+      width: toRem(500);
+   }
+
+   @media (max-width: $mobile) {
+      max-width: toRem(320);
+   }
+}
+
+.feedback-slider__btn-container {
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: $whiteColor;
+   z-index: 5;
+   width: 30px;
+   padding: 0 toRem(5);
+   height: 55%;
+
+   @media (max-width: $tablet) {
+      height: 80%;
+   }
+}
+
+.feedback-button-prev,
+.feedback-button-next {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   cursor: pointer;
+   height: 25px;
+   z-index: 2;
+}
+
+.feedback-button-prev {
+   left: 0;
+
+   &::before {
+      position: absolute;
+      display: inline-block;
+      content: '<';
+      font-size: toRem(35);
+      line-height: 0.5;
+      font-weight: 700;
+   }
+}
+
+.feedback-button-next {
+   right: 0;
+
+   &::before {
+      position: absolute;
+      display: inline-block;
+      content: '>';
+      font-size: toRem(35);
+      line-height: 0.5;
+      font-weight: 700;
+   }
+}
+
+.feedback__votes {
+   margin-bottom: toRem(12);
+}
+
+.feedback__name {
+   font-weight: 500;
+   font-size: toRem(13);
+}
+
+.feedback__item {
+   line-height: 1.5;
+   font-size: toRem(13);
+   padding-right: toRem(30);
+
+   @media (max-width: $tablet) {}
+}
+
+.rooms-add {
+   padding-bottom: toRem(50);
+   @media (max-width: $smallMobile) {
+      padding-bottom: toRem(20);
+   }
+}
+
+.rooms-add__title {
+   @include title;
+   margin-bottom: toRem(50);
+
+   @media (max-width: $tablet) {
+      margin-bottom: toRem(20);
+   }
+
+   @media (max-width: $mobile) {
+      margin-bottom: toRem(10);
+   }
+}
+
+.rooms-add__wrapper {
+   padding: 0 toRem(10);
+   display: flex;
+   margin: 0 auto;
+   gap: 0 toRem(16);
+
+   @media (max-width: $tablet) {
+      justify-content: space-between;
+   }
+
+   @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: toRem(16) 0;
+   }
+}
+
+.rooms-add__body {
+   width: calc(50% - 8px);
+   position: relative;
+
+   @media (max-width: $tablet) {
+      flex: 1 1 50%;
+      height: toRem(273);
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 2px 2px 20px 4px #e46f2b23;
+   }
+
+   @media (max-width: $mobile) {
+      width: 100%;
+      max-height: 290px;
+   }
+}
+
+.rooms-add__img-container {
+   height: toRem(345);
+   margin-bottom: toRem(27);
+   width: 100%;
+   position: relative;
+
+   @media (max-width: $tablet) {
+      flex: 0 2 65%;
+      height: unset;
+      margin-bottom: 0;
+   }
+   @media (max-width: $mobile) {
+      height: 290px;
+   }
+
+}
+
+.room-add__slider {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+
+   @media (max-width: $tablet) {
+      display: none;
+   }
+}
+
+.room-add__btn-container {
+   position: relative;
+   bottom: 21%;
+   left: 75%;
+   display: flex;
+   gap: 0 toRem(16);
+   z-index: 5;
+
+   @media (max-width: $tablet) {
+      display: none;
+   }
+}
+
+.room-add-button-next,
+.room-add-button-prev {
+   width: toRem(48);
+   aspect-ratio: 1;
+   background-color: $mainColor;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.room-add-button-prev {
+   &::before {
+      position: absolute;
+      display: inline-block;
+      content: '<';
+      font-size: toRem(35);
+      line-height: 0.5;
+      font-weight: 700;
+      color: $whiteColor;
+   }
+}
+
+.room-add-button-next {
+   &::before {
+      position: absolute;
+      display: inline-block;
+      content: '>';
+      font-size: toRem(35);
+      line-height: 0.5;
+      font-weight: 700;
+      color: $whiteColor;
+   }
+}
+
+.rooms-add__img-container img {
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+}
+
+.rooms-add__link-btn {
+   bottom: 22%;
+   left: 2%;
+   @include link-btn ($mainColor, $whiteColor, $whiteColor);
+   padding: toRem(24);
+   width: toRem(150);
+   font-size: 0.8rem;
+   z-index: 5;
+   @media (max-width: $tablet) {
+      left: -45%;
+      @include adaptiveValueMobile('width', 155, 120);
+   }
+
+   @media (max-width: $mobile) {
+      bottom: 20%;
+      @include adaptiveValueSMobile('width', 230, 115);
+   }
+
+   &::before {
+      height: toRem(32);
+   }
+}
+
+.room-add__data-content {
+   @media (max-width: $tablet) {
+      flex: 1 1 35%;
+      order: -1;
+      display: flex;
+      flex-direction: column;
+      padding: toRem(10) toRem(5) toRem(10) toRem(10);
+   }
+
+   @media (max-width: $mobile) {
+      padding: toRem(12) toRem(5) toRem(12) toRem(12);
+   }
+}
+
+.room-add__swap-img {
+   display: none;
+
+   @media (max-width: $tablet) {
+      display: inline;
+   }
+}
+
+
+.room__notes-wrapper.rooms-add__card {
+   margin-bottom: toRem(0);
+
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      position: absolute;
+      bottom: 35%;
+   }
+}
+
+.rooms-add__title-container {
+   display: flex;
+   margin-bottom: toRem(10);
+   align-items: baseline;
+   justify-content: space-between;
+
+   @media (max-width: $tablet) {
+      flex-direction: column;
+      order: -1;
+   }
+}
+
+.rooms-add__card-title {
+   font-size: toRem(24);
+   letter-spacing: -1px;
+   line-height: 1;
+
+   @media (max-width: $tablet) {
+      font-size: toRem(16);
+   }
+}
+
+.room-card__bed-qty {
+   @media (max-width: $tablet) {
+      font-size: toRem(12);
+   }
+}
+
+.rooms-add__text {
+   max-width: 55%;
+   font-size: toRem(12);
+   line-height: 1.4;
+   font-weight: 300;
+
+   @media (max-width: $tablet) {
+      display: none;
+   }
+}
+
+.rooms-add__price {
+   font-size: toRem(24);
+   font-weight: 700;
+   color: $mainColor;
+   margin-right: toRem(16);
+   white-space: nowrap;
+
+   @media (max-width: $tablet) {
+      position: absolute;
+      bottom: 22%;
+      font-size: toRem(28.8);
+   }
+}

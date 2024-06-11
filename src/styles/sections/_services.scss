@@ -1,0 +1,214 @@
+@import '../base/vars';
+
+.service {
+   background-color: $whiteColor;
+}
+
+.service__container {
+   max-width: $containerWidth;
+   margin: 0 auto;
+   padding: toRem(35) toRem(10) toRem(65);
+
+   @media (max-width: $tablet) {
+      @include adaptiveValueMobile('max-width', 787, 590);
+      padding-bottom: toRem(10);
+   }
+
+   @media (max-width: $smallMobile) {
+      @include adaptiveValueSMobile('max-width', 590, 395);
+   }
+}
+
+.service__title {
+   @include title;
+   line-height: 0.9;
+   max-width: toRem(850);
+   margin-bottom: 3.1rem;
+
+   @media (max-width: $mobile) {
+      margin-bottom: toRem(40);
+   }
+
+   @media (max-width: $smallMobile) {
+      margin-bottom: toRem(30);
+   }
+
+}
+
+.service__items-wrapper {
+   position: relative;
+   display: flex;
+   padding: 0 toRem(15);
+   max-width: 100%;
+   margin-bottom: 10px;
+   min-width: 0;
+
+   @media (max-width: $tablet) {
+      padding: 0;
+   }
+}
+
+.service__slider {
+   height: 100%;
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+.service-button-prev,
+.service-button-next {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   @include adaptiveValue('top', 242, 151);
+   width: toRem(50);
+   aspect-ratio: 1;
+   background-color: $mainColor;
+   color: $whiteColor;
+   z-index: 2;
+   text-align: center;
+   line-height: 1.2;
+   cursor: pointer;
+   transition: background-color .3s ease-out;
+   border: 2px solid transparent;
+   text-align: center;
+   padding: 0;
+
+   @media (max-width: $tablet) {
+      @include adaptiveValueMobile ('top', 196, 130);
+   }
+
+   @media (max-width: $mobile) {
+      @include adaptiveValueSMobile ('top', 326, 100);
+   }
+
+   @media (max-width: $smallMobile) {
+      width: toRem(30);
+      @include adaptiveValueSMobile ('top', 358, 205);
+   }
+}
+
+.service-button-prev {
+   left: toRem(-10);
+
+   @media (max-width: $tablet) {
+      left: 0;
+      transform: translateX(-50%);
+   }
+
+   @media (max-width: $smallMobile) {
+      left: toRem(4);
+   }
+
+   &::before {
+      content: '<';
+      color: inherit;
+      font-size: toRem(40);
+
+      @media (max-width: $smallMobile) {
+         font-size: toRem(20);
+      }
+   }
+}
+
+.service-button-next {
+   right: toRem(16);
+   transform: translateX(50%);
+
+   @media (max-width: $tablet) {
+      right: 0;
+   }
+
+   @media (max-width: $smallMobile) {
+      right: toRem(4);
+   }
+
+   &::before {
+      content: '>';
+      color: inherit;
+      font-size: toRem(40);
+
+      @media (max-width: $smallMobile) {
+         font-size: toRem(20);
+         right: toRem(6);
+      }
+   }
+}
+
+.service-button-prev.swiper-button-disabled,
+.service-button-next.swiper-button-disabled {
+   opacity: 1 !important;
+   background-color: #fff !important;
+   color: #000 !important;
+   border: 2px solid #000;
+}
+
+
+.service__item {
+   background-color: $whiteColor2;
+   flex: 0 1 33%;
+   min-height: toRem(540);
+   margin: 0 auto;
+
+   @media (max-width: $tablet) {
+      min-height: toRem(490);
+   }
+
+   @media (max-width: $smallMobile) {
+      min-height: toRem(470);
+   }
+}
+
+.service__img-container {
+   margin-bottom: 1.6rem;
+
+   @media (max-width: $smallMobile) {
+      margin-bottom: toRem(16);
+   }
+}
+
+.service__item img {
+   display: block;
+   max-width: 100%;
+}
+
+.service__description {
+   margin: 0 auto;
+   max-width: 85%;
+
+   @media (max-width: $tablet) {
+      max-width: 91%;
+   }
+}
+
+.service__item-title {
+   font-size: toRem(20);
+   color: $fontColor;
+   margin-bottom: 0.7rem;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(18);
+      margin-bottom: toRem(10);
+   }
+}
+
+.service__text {
+   font-size: toRem(12);
+   font-weight: 400;
+   color: $fontColor;
+   line-height: 1.6;
+   margin-bottom: 0.7rem;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(12);
+   }
+}
+
+.service__link {
+   font-size: toRem(12);
+   color: $mainColor;
+
+   @media (max-width: $smallMobile) {
+      font-size: toRem(14);
+   }
+}
