@@ -5,8 +5,7 @@ import 'swiper/scss'
 import 'swiper/scss/navigation'
 
 const swiper = new Swiper('.main__slider', {
-   modules: [Navigation, Autoplay, EffectFade],
-   effect: "fade",
+   modules: [Navigation],
    loop: true,
    navigation: {
       nextEl: '.swiper-button-next',

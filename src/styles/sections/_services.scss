@@ -60,7 +60,7 @@
    justify-content: center;
    align-items: center;
    position: absolute;
-   @include adaptiveValue('top', 242, 151);
+   @include adaptiveValue('top', 238, 151);
    width: toRem(50);
    aspect-ratio: 1;
    background-color: $mainColor;
@@ -161,15 +161,17 @@
 
 .service__img-container {
    margin-bottom: 1.6rem;
-
+   height: 294px;
    @media (max-width: $smallMobile) {
       margin-bottom: toRem(16);
    }
 }
 
 .service__item img {
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
    display: block;
-   max-width: 100%;
 }
 
 .service__description {

@@ -106,17 +106,17 @@
                </div>
                <div class="room__images-container">
                   <div class="room__image-main" data-mainImage>
-                     <img id="main-image" src="./img/content/room-card_main.jpg" alt="Комната">
+                     <img id="main-image" src="./img/rooms/room-gallery-01.jpg" alt="Комната">
                   </div>
                   <div class="room__images-row">
                      <div class="room__images-item" data-image>
-                        <img src="./img/content/room-card_02.jpg" alt="Комната" class="room__image">
+                        <img src="./img/rooms/room-gallery-02.jpg" alt="Комната" class="room__image">
                      </div>
                      <div class="room__images-item" data-image>
-                        <img src="./img/content/room-card_03.jpg" alt="Комната" class="room__image">
+                        <img src="./img/rooms/room-gallery-03.jpg" alt="Комната" class="room__image">
                      </div>
                      <div class="room__images-item" data-image>
-                        <img src="./img/content/room-card_04.jpg" alt="Комната" class="room__image">
+                        <img src="./img/rooms/room-gallery-04.jpg" alt="Комната" class="room__image">
                      </div>
                   </div>
                </div>
@@ -265,17 +265,17 @@
             <div class="rooms-add__wrapper">
                <div class="rooms-add__body">
                   <div class="rooms-add__img-container">
-                     <img src="./img/content/02.png" alt="номер" class="room-add__swap-img">
+                     <img src="./img/rooms/room-preview-03.jpg" alt="номер" class="room-add__swap-img">
                      <div class="room-add__slider">
                         <div class="swiper-wrapper img-wrapp">
                            <div class="swiper-slide img-wrapp">
-                              <img src="./img/content/02.png" alt="номер" class="room-add__img">
+                              <img src="./img/rooms/room-preview-03.jpg" alt="номер" class="room-add__img">
                            </div>
                            <div class="swiper-slide">
-                              <img src="./img/content/03.png" alt="номер" class="room-add__img">
+                              <img src="./img/rooms/room-preview-03-1.jpg" alt="номер" class="room-add__img">
                            </div>
                            <div class="swiper-slide">
-                              <img src="./img/content/04.png" alt="номер" class="room-add__img">
+                              <img src="./img/rooms/room-preview-03-2.jpg" alt="номер" class="room-add__img">
                            </div>
                         </div>
                         <div class="room-add__btn-container">
@@ -330,17 +330,17 @@
                </div>
                <div class="rooms-add__body">
                   <div class="rooms-add__img-container">
-                     <img src="./img/content/03.png" alt="номер" class="room-add__swap-img">
+                     <img src="./img/rooms/room-preview-05.jpg" alt="номер" class="room-add__swap-img">
                      <div class="room-add__slider">
                         <div class="swiper-wrapper">
                            <div class="swiper-slide">
-                              <img src="./img/content/03.png" alt="номер" class="room-add__img">
+                              <img src="./img/rooms/room-preview-05.jpg" alt="номер" class="room-add__img">
                            </div>
                            <div class="swiper-slide">
-                              <img src="./img/content/04.png" alt="номер" class="room-add__img">
+                              <img src="./img/rooms/room-preview-05-1.jpg" alt="номер" class="room-add__img">
                            </div>
                            <div class="swiper-slide">
-                              <img src="./img/content/06.png" alt="номер" class="room-add__img">
+                              <img src="./img/rooms/room-preview-05-2.jpg" alt="номер" class="room-add__img">
                            </div>
                         </div>
                         <div class="room-add__btn-container">
@@ -395,39 +395,7 @@
                </div>
             </div>
          </section>
-         <section class="questions">
-            <div class="questions__container container">
-               <div class="questions__wrapper">
-                  <form id="questions-form" action="#" method="post" class="questions__form">
-                     <h3 class="questions__form-title">Остались вопросы</h3>
-                     <div class="questions__form-item">
-                        <input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
-                     </div>
-                     <div class="questions__form-item">
-                        <input type="number" id="phone" name="phone" class="questions__form-input"
-                           placeholder="Телефон" />
-                     </div>
-                     <div class="questions__form-item">
-                        <textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
-                           placeholder="Комментарий, если есть"></textarea>
-                     </div>
-                     <button type="submit" class="questions__form-btn">
-                        Получить ответ
-                     </button>
-                     <p class="questions__form-note">
-                        Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
-                        <a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
-                     </p>
-                  </form>
-                  <div class="questions__callback">
-                     <div class="questions__callback-wrapper">
-                        <p class="questions__callback-text">Телефон обратной связи</p>
-                        <p class="questions__callback-phone">+7 (383) 355 99 93</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+			@@include('html/_questions.htm')
       </main>
       @@include('html/_footer.htm') @@include('html/_scroll.htm') @@include('html/_modal.htm')
    </div>

@@ -5,7 +5,6 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="./styles/index.css" />
-	<!-- <script defer src="js/index.js"></script> -->
 	<title>Document</title>
 </head>
 
@@ -70,7 +69,7 @@
 						</div>
 					</div>
 					<div class="booking__btn-container">
-						<a href="#" class="booking__search-btn">Найти номер</a>
+						<a href="/rooms.html" class="booking__search-btn">Найти номер</a>
 						<a href="/rooms.html" class="booking__link-btn">Забронировать первым</a>
 					</div>
 				</div>
@@ -194,7 +193,7 @@
 										</div>
 									</div>
 									<div class="room-card__img-container">
-										<img class="room-card__img" src="./img/content/06.png" alt="комната" />
+										<img class="room-card__img" src="./img/rooms/room-preview-01.png" alt="комната" />
 									</div>
 								</div>
 								<div class="room-card__item">
@@ -235,7 +234,7 @@
 										</div>
 									</div>
 									<div class="room-card__img-container">
-										<img class="room-card__img" src="./img/content/02.png" alt="комната" />
+										<img class="room-card__img" src="./img/rooms/room-preview-03.jpg" alt="комната" />
 									</div>
 
 								</div>
@@ -277,7 +276,7 @@
 										</div>
 									</div>
 									<div class="room-card__img-container">
-										<img class="room-card__img" src="./img/content/03.png" alt="комната" />
+										<img class="room-card__img" src="./img/rooms/room-preview-02.png" alt="комната" />
 									</div>
 
 								</div>
@@ -319,7 +318,7 @@
 										</div>
 									</div>
 									<div class="room-card__img-container">
-										<img class="room-card__img" src="./img/content/04.png" alt="номер" />
+										<img class="room-card__img" src="./img/rooms/room-preview-04.png" alt="номер" />
 									</div>
 								</div>
 								<div class="room-card__item">
@@ -360,7 +359,7 @@
 										</div>
 									</div>
 									<div class="room-card__img-container">
-										<img class="room-card__img" src="./img/content/05.png" alt="номер" />
+										<img class="room-card__img" src="./img/rooms/room-preview-05.jpg" alt="номер" />
 									</div>
 
 								</div>
@@ -402,7 +401,7 @@
 										</div>
 									</div>
 									<div class="room-card__img-container">
-										<img class="room-card__img" src="./img/content/06.png" alt="номер" />
+										<img class="room-card__img" src="./img/rooms/room-preview-06.png" alt="номер" />
 									</div>
 								</div>
 
@@ -538,7 +537,6 @@
 					<div class="service__wrapper">
 						<h2 class="service__title">Дополнительные услуги</h2>
 						<div class="service__items-wrapper">
-							<!-- slider -->
 							<div class="service__slider">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -606,10 +604,10 @@
 									<div class="swiper-slide">
 										<div class="service__item">
 											<div class="service__img-container">
-												<img src="./img/content/restaurant.jpg" alt="ресторан" />
+												<img src="./img/content/room-service-01.jpg" alt="уборка номера" />
 											</div>
 											<div class="service__description">
-												<h4 class="service__item-title">Ресторан</h4>
+												<h4 class="service__item-title">Уборка номера</h4>
 												<p class="service__text">
 													Но сложившаяся структура организации требует определения и уточнения новых
 													предложений.
@@ -625,10 +623,10 @@
 									<div class="swiper-slide">
 										<div class="service__item">
 											<div class="service__img-container">
-												<img src="./img/content/conference.jpg" alt="конференц зал" />
+												<img src="./img/content/private-service.jpg" alt="консьерж" />
 											</div>
 											<div class="service__description">
-												<h4 class="service__item-title">Конференц-зал</h4>
+												<h4 class="service__item-title">Услуги консьержа</h4>
 												<p class="service__text">
 													Мы вынуждены отталкиваться от того, что укрепление и развитие внутренней
 													структуры не
@@ -647,10 +645,10 @@
 									<div class="swiper-slide">
 										<div class="service__item">
 											<div class="service__img-container">
-												<img src="./img/content/passage.jpg" alt="отель" />
+												<img src="./img/content/transfer.jpg" alt="трансфер" />
 											</div>
 											<div class="service__description">
-												<h4 class="service__item-title">События в отеле</h4>
+												<h4 class="service__item-title">Трансфер</h4>
 												<p class="service__text">
 													С другой стороны, экономическая повестка сегодняшнего дня напрямую зависит от
 													инновационных
@@ -668,44 +666,11 @@
 								<div class="service-button-prev"></div>
 								<div class="service-button-next"></div>
 							</div>
-							<!-- slider -->
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="questions">
-				<div class="questions__container container">
-					<div class="questions__wrapper">
-						<form id="questions-form" action="#" method="post" class="questions__form">
-							<h3 class="questions__form-title">Остались вопросы</h3>
-							<div class="questions__form-item">
-								<input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
-							</div>
-							<div class="questions__form-item">
-								<input type="number" id="phone" name="phone" class="questions__form-input"
-									placeholder="Телефон" />
-							</div>
-							<div class="questions__form-item">
-								<textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
-									placeholder="Комментарий, если есть"></textarea>
-							</div>
-							<button type="submit" class="questions__form-btn">
-								Получить ответ
-							</button>
-							<p class="questions__form-note">
-								Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
-								<a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
-							</p>
-						</form>
-						<div class="questions__callback">
-							<div class="questions__callback-wrapper">
-								<p class="questions__callback-text">Телефон обратной связи</p>
-								<p class="questions__callback-phone">+7 (383) 355 99 93</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			@@include('html/_questions.htm')
 		</main>
 		@@include('html/_footer.htm') @@include('html/_scroll.htm') @@include('html/_modal.htm')
 	</div>

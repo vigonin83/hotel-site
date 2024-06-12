@@ -1,0 +1,33 @@
+<section class="questions">
+   <div class="questions__container container">
+      <div class="questions__wrapper">
+         <form id="questions-form" action="#" method="post" class="questions__form">
+            <h3 class="questions__form-title">Остались вопросы</h3>
+            <div class="questions__form-item">
+               <input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
+            </div>
+            <div class="questions__form-item">
+               <input id="phone" name="phone" class="questions__form-input" placeholder="+7 (___) ___-__-__"
+                  pattern="/^+7\d*" type="tel" />
+            </div>
+            <div class="questions__form-item">
+               <textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
+                  placeholder="Комментарий, если есть"></textarea>
+            </div>
+            <button type="submit" class="questions__form-btn">
+               Получить ответ
+            </button>
+            <p class="questions__form-note">
+               Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
+               <a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
+            </p>
+         </form>
+         <div class="questions__callback">
+            <div class="questions__callback-wrapper">
+               <p class="questions__callback-text">Телефон обратной связи</p>
+               <p class="questions__callback-phone">+7 (383) 355 99 93</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

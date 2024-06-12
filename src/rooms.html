@@ -101,7 +101,7 @@
                               </div>
                            </div>
                            <div class="room-card__img-container">
-                              <img class="room-card__img" src="./img/content/06.png" alt="комната" />
+                              <img class="room-card__img" src="./img/rooms/room-preview-01.png" alt="комната" />
                            </div>
                         </div>
                         <div class="room-card__item">
@@ -142,7 +142,7 @@
                               </div>
                            </div>
                            <div class="room-card__img-container">
-                              <img class="room-card__img" src="./img/content/02.png" alt="комната" />
+                              <img class="room-card__img" src="./img/rooms/room-preview-03.jpg" alt="комната" />
                            </div>
 
                         </div>
@@ -184,7 +184,7 @@
                               </div>
                            </div>
                            <div class="room-card__img-container">
-                              <img class="room-card__img" src="./img/content/03.png" alt="комната" />
+                              <img class="room-card__img" src="./img/rooms/room-preview-02.png" alt="комната" />
                            </div>
 
                         </div>
@@ -226,7 +226,7 @@
                               </div>
                            </div>
                            <div class="room-card__img-container">
-                              <img class="room-card__img" src="./img/content/04.png" alt="номер" />
+                              <img class="room-card__img" src="./img/rooms/room-preview-06.png" alt="номер" />
                            </div>
                         </div>
                         <div class="room-card__item">
@@ -267,7 +267,7 @@
                               </div>
                            </div>
                            <div class="room-card__img-container">
-                              <img class="room-card__img" src="./img/content/05.png" alt="номер" />
+                              <img class="room-card__img" src="./img/rooms/room-preview-05.jpg" alt="номер" />
                            </div>
 
                         </div>
@@ -309,7 +309,7 @@
                               </div>
                            </div>
                            <div class="room-card__img-container">
-                              <img class="room-card__img" src="./img/content/06.png" alt="номер" />
+                              <img class="room-card__img" src="./img/rooms/room-preview-04.png" alt="номер" />
                            </div>
                         </div>
 
@@ -318,40 +318,7 @@
                </div>
             </div>
          </section>
-
-         <section class="questions">
-            <div class="questions__container container">
-               <div class="questions__wrapper">
-                  <form id="questions-form" action="#" method="post" class="questions__form">
-                     <h3 class="questions__form-title">Остались вопросы</h3>
-                     <div class="questions__form-item">
-                        <input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя" />
-                     </div>
-                     <div class="questions__form-item">
-                        <input type="number" id="phone" name="phone" class="questions__form-input"
-                           placeholder="Телефон" />
-                     </div>
-                     <div class="questions__form-item">
-                        <textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
-                           placeholder="Комментарий, если есть"></textarea>
-                     </div>
-                     <button type="submit" class="questions__form-btn">
-                        Получить ответ
-                     </button>
-                     <p class="questions__form-note">
-                        Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
-                        <a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
-                     </p>
-                  </form>
-                  <div class="questions__callback">
-                     <div class="questions__callback-wrapper">
-                        <p class="questions__callback-text">Телефон обратной связи</p>
-                        <p class="questions__callback-phone">+7 (383) 355 99 93</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+         @@include('html/_questions.htm')
       </main>
       @@include('html/_footer.htm') @@include('html/_scroll.htm') @@include('html/_modal.htm')
    </div>
