@@ -21,11 +21,11 @@
 }
 
 .rooms-catalog__container {
-   max-width: 1522px;
+   max-width: toRem(1522);
    margin: 0 auto;
-   padding: 0 11px 4rem;
+   padding: 0 toRem(11) toRem(96);
    position: relative;
-   top: -1rem;
+   top: toRem(16);
    z-index: 2;
 
    @media (max-width: $mobile) {
@@ -270,7 +270,7 @@
    align-items: center;
    bottom: 0;
    right: 0;
-   transform: translateY(60%);
+   transform: translateY(35%);
    background-color: $whiteColor2;
    padding: toRem(15);
    width: toRem(767);

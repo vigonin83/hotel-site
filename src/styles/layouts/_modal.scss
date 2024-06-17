@@ -1,6 +1,5 @@
 @import '../base/vars';
 
-
 .modal {
    position: fixed;
    height: 100%;
@@ -16,7 +15,7 @@
    z-index: 99999;
 }
 
-.modal.open {
+.modal.--open {
    opacity: 1;
    visibility: visible;
 }
@@ -43,7 +42,7 @@
    }
 }
 
-.modal__body.open {
+.modal__body.--open {
    opacity: 1;
    transform: translateY(0);
 }

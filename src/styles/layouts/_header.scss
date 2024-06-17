@@ -100,6 +100,13 @@
 .nav__link {
    display: inline-block;
    vertical-align: baseline;
+
+   @media (any-hover:hover) {
+      &:hover {
+         color: $mainColor;
+         transition: $mainTransition;
+      }
+   }
 }
 
 .header__contacts {
@@ -137,6 +144,14 @@
    padding: 0;
    font: inherit;
    text-wrap: nowrap;
+
+   @media (any-hover:hover) {
+      &:hover {
+         color: $mainColor;
+         transition: $mainTransition;
+      }
+   }
+
 }
 
 .address span {
@@ -238,12 +253,14 @@
       height: toRem(48);
       width: toRem(48);
       padding: toRem(15) toRem(12);
+
       &:before {
          height: toRem(2);
          background-color: $mainColor;
          border-radius: 2px;
 
       }
+
       &::after {
          height: toRem(2);
          background-color: $mainColor;
@@ -272,7 +289,7 @@
    }
 }
 
-.header__menu-burger.-active {
+.header__menu-burger.--active {
    &:before {
       top: 50%;
       transform: rotateZ(-45deg);
@@ -283,6 +300,7 @@
       transform: rotateZ(45deg);
    }
 }
-.header__menu-burger.-active span{
+
+.header__menu-burger.--active span {
    transform: scale(0);
 }

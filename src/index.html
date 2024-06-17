@@ -124,26 +124,26 @@
 								<div class="filter-rooms__form">
 									<h2 class="filter-rooms__title">Номера</h2>
 									<div class="filter-rooms__price">
-										<label for="price">Цена: 7 000 &#8381;</label>
-										<input type="range" id="price" name="price" min="8000" max="20000" value="4000"
-											step="1000" />
+										<label for="price">Цена: <span data-input-value>4000</span> &#8381;</label>
+										<input id="price-input" data-room-filter type="range" name="price" min="900" max="15000" value="4000"
+											step="100" />
 										<div class="filter-rooms__item-wrapper">
-											<span>800 &#8381;</span>
-											<span>20 000 &#8381;</span>
+											<span>900 &#8381;</span>
+											<span>15 000 &#8381;</span>
 										</div>
 									</div>
 									<div class="filter-rooms__popularity">
-										<label for="popularity">Популярность: 2</label>
-										<input type="range" id="popularity" name="popularity" min="0" max="5" value="4"
+										<label for="popularity">Популярность: <span data-input-value>4</span></label>
+										<input id="popularity-input" data-room-filter type="range" name="popularity" min="1" max="5" value="4"
 											step="1" />
 										<div class="filter-rooms__item-wrapper">
-											<span>0</span>
+											<span>1</span>
 											<span>5</span>
 										</div>
 									</div>
 									<div class="filter-rooms__beds">
-										<label for="popularity">Места: 3</label>
-										<input type="range" id="beds" name="beds" min="1" max="8" value="2" step="1" />
+										<label for="guest">Мест: <span data-input-value>2</span></label>
+										<input id="guest-input" data-room-filter type="range" name="beds" min="1" max="8" value="2" step="1" />
 										<div class="filter-rooms__item-wrapper">
 											<span>1</span>
 											<span>8</span>
@@ -199,7 +199,7 @@
 								<div class="room-card__item">
 									<div class="room-card__content">
 										<div class="room-card__content-top">
-											<h4 class="room-card__type-title">Стандартный улучшенный</h4>
+											<h4 class="room-card__type-title">Стандартный улучшенный номер</h4>
 											<div class="room-card__rating">
 												<ul class="room-card__stars">
 													<li class="room-card__star-item">

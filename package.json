@@ -12,7 +12,8 @@
   },
   "type": "module",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/vigonin83/hotelSite"
   },
   "keywords": [
     "scss, js, gulp"

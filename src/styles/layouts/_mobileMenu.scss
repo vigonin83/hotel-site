@@ -12,11 +12,9 @@
       left: 0;
       bottom: 0;
       background-color: $mainColor;
-      // background-image: url(../../img/backgrounds/alpha-white.png), linear-gradient(45deg, $mainColor, $mainColor);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      // background-blend-mode: soft-light;
       color: #fff;
       width: 100%;
       margin: 0 auto;
@@ -26,7 +24,7 @@
       z-index: 9000;
    }
 
-   .mobile-menu.-open {
+   .mobile-menu.--open {
       transform: translateX(0);
    }
 
