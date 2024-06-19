@@ -60,9 +60,9 @@
    justify-content: center;
    align-items: center;
    position: absolute;
-   @include adaptiveValue('top', 238, 151);
+   bottom: toRem(263);
    width: toRem(50);
-   aspect-ratio: 1;
+   height: toRem(50);
    background-color: $mainColor;
    color: $whiteColor;
    z-index: 2;
@@ -75,16 +75,13 @@
    padding: 0;
 
    @media (max-width: $tablet) {
-      @include adaptiveValueMobile ('top', 196, 130);
-   }
-
-   @media (max-width: $mobile) {
-      @include adaptiveValueSMobile ('top', 326, 100);
+      top: toRem(244);
    }
 
    @media (max-width: $smallMobile) {
       width: toRem(30);
-      @include adaptiveValueSMobile ('top', 358, 205);
+      height: toRem(30);
+      top: toRem(264);
    }
 }
 
@@ -147,11 +144,11 @@
 .service__item {
    background-color: $whiteColor2;
    flex: 0 1 33%;
-   min-height: toRem(540);
+   min-height: toRem(557);
    margin: 0 auto;
 
    @media (max-width: $tablet) {
-      min-height: toRem(490);
+      min-height: toRem(502);
    }
 
    @media (max-width: $smallMobile) {
@@ -198,7 +195,7 @@
    font-size: toRem(12);
    font-weight: 400;
    color: $fontColor;
-   line-height: 1.6;
+   line-height: 1.4;
    margin-bottom: 0.7rem;
 
    @media (max-width: $smallMobile) {

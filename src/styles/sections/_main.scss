@@ -317,8 +317,7 @@
 
    @media (max-width: 459.98px) {
       width: 99.97%;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
    }
 }
 
@@ -335,8 +334,8 @@
    top: toRem(650) !important;
    right: 0 !important;
    background-color: $mainColor;
-   width: toRem(65) !important;
-   height: toRem(65) !important;
+   width: toRem(50) !important;
+   height: toRem(50) !important;
 
    &::after {
       font-size: toRem(25) !important;
@@ -344,7 +343,7 @@
    }
 
    @media (max-width: $tablet) {
-      top: 50% !important;
+      top: 47% !important;
    }
 
    @media (max-width: $smallMobile) {
@@ -629,7 +628,9 @@
 
    @media (max-width: $smallMobile) {
       order: -1;
-      flex-basis: auto;
+      margin: 0 auto;
+      // flex-basis: auto;
+
    }
 }
 
@@ -663,8 +664,8 @@
 
    @media (max-width: $smallMobile) {
       box-shadow: none;
-      padding: 0;
-      @include adaptiveValueSMobile('max-width', 590, 395);
+      // @include adaptiveValueSMobile('max-width', 590, 358);
+      max-width: 100%;
       padding: toRem(20) toRem(10) toRem(15);
    }
 }
