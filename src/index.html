@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -63,7 +62,7 @@
 								<span id="counter-rooms" class="counter__number">1</span>
 								<div class="counter__btn-container" data-set="rooms">
 									<button id="counterBtn-roomDecr" class="counter__btn-minus">&minus;</button>
-									<button id="counterBtn-roomIncr"class="counter__btn-plus">&plus;</button>
+									<button id="counterBtn-roomIncr" class="counter__btn-plus">&plus;</button>
 								</div>
 							</div>
 						</div>
@@ -120,37 +119,36 @@
 				<div class="rooms-catalog__container">
 					<div class="rooms-catalog__wrapper">
 						<aside class="rooms-catalog__filter filter-rooms">
-							<div class="filter-rooms__wrapper">
-								<div class="filter-rooms__form">
-									<h2 class="filter-rooms__title">Номера</h2>
-									<div class="filter-rooms__price">
-										<label for="price-input">Цена: <span data-input-value>4000</span> &#8381;</label>
-										<input id="price-input" data-room-input type="range" name="price" min="900" max="15000" value="4000"
-											step="100" />
-										<div class="filter-rooms__item-wrapper">
-											<span>900 &#8381;</span>
-											<span>15 000 &#8381;</span>
-										</div>
+							<div class="filter-rooms__form">
+								<h2 class="filter-rooms__title">Номера</h2>
+								<div class="filter-rooms__block-item filter-rooms__price">
+									<label for="price-input">Цена: <span data-input-value>4000</span> &#8381;</label>
+									<input id="price-input" data-room-input type="range" name="price" min="900" max="15000"
+										value="4000" step="100" />
+									<div class="filter-rooms__item-wrapper">
+										<span>900 &#8381;</span>
+										<span>15 000 &#8381;</span>
 									</div>
-									<div class="filter-rooms__popularity">
-										<label for="popularity-input">Популярность: <span data-input-value>4</span></label>
-										<input id="popularity-input" data-room-input type="range" name="popularity" min="1" max="5" value="4"
-											step="1" />
-										<div class="filter-rooms__item-wrapper">
-											<span>1</span>
-											<span>5</span>
-										</div>
-									</div>
-									<div class="filter-rooms__beds">
-										<label for="guest-input">Мест: <span data-input-value>2</span></label>
-										<input id="guest-input" data-room-input type="range" name="beds" min="1" max="8" value="2" step="1" />
-										<div class="filter-rooms__item-wrapper">
-											<span>1</span>
-											<span>8</span>
-										</div>
-									</div>
-									<button class="filter-rooms__reset">Очистить фильтр</button>
 								</div>
+								<div class="filter-rooms__block-item filter-rooms__popularity">
+									<label for="popularity-input">Популярность: <span data-input-value>4</span></label>
+									<input id="popularity-input" data-room-input type="range" name="popularity" min="1" max="5"
+										value="4" step="1" />
+									<div class="filter-rooms__item-wrapper">
+										<span>1</span>
+										<span>5</span>
+									</div>
+								</div>
+								<div class="filter-rooms__block-item filter-rooms__beds">
+									<label for="guest-input">Мест: <span data-input-value>2</span></label>
+									<input id="guest-input" data-room-input type="range" name="beds" min="1" max="8" value="2"
+										step="1" />
+									<div class="filter-rooms__item-wrapper">
+										<span>1</span>
+										<span>8</span>
+									</div>
+								</div>
+								<button class="filter-rooms__reset">Очистить фильтр</button>
 							</div>
 						</aside>
 						<div class="room-card__container">

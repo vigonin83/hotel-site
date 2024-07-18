@@ -70,18 +70,21 @@
    }
 }
 
+.filter-rooms__form {
+   min-height: 100%;
+}
+
 .filter-rooms__title {
    font-size: 1.2rem;
    line-height: 1;
    margin-bottom: 0.7rem;
 }
 
-.filter-rooms__form div {
-   margin-bottom: 1.2rem;
-
-   & div:last-child {
-      margin-bottom: 0;
-   }
+.filter-rooms__block-item {
+   display: flex;
+   flex-direction: column;
+   gap: toRem(10);
+   margin-bottom: toRem(17);
 }
 
 .filter-rooms__form {
@@ -136,7 +139,7 @@
 .filter-rooms__item-wrapper {
    display: flex;
    justify-content: space-between;
-   margin-top: 0.4rem;
+   // margin-top: 0.4rem;
 }
 
 .filter-rooms__reset {
