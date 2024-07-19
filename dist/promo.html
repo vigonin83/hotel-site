@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="./styles/index.css" />
+   <title>Document</title>
+</head>
+
+<body class="body">
+   <div class="app__wrapper">
+      <header id="header" class="header">
+	<div class="header__container">
+		<div class="header__wrapper">
+			<div class="header__menu">
+				<a href="/" class="logo">
+					<picture class="logo__img-set">
+						<source media="(max-width: 767.98px)" srcset="./img/icons/logo-2.svg">
+						<img class="logo__img" src="./img/icons/logo.svg" alt="логотип" />
+					</picture>
+				</a>
+				<span class="company-name">Авитель</span>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<img src="./img/icons/star-promotion.svg" alt="акции" class="nav__img" />
+							<a href="/promotions.html" class="nav__link">Акции</a>
+						</li>
+						<li class="nav__item">
+							<img src="./img/icons/bed.svg" alt="номера" class="nav__img" />
+							<a href="/rooms.html" class="nav__link">Номера</a>
+						</li>
+						<li class="nav__item">
+							<img src="./img/icons/service.svg" alt="услуги" class="nav__img" />
+							<a href="/services.html" class="nav__link">Услуги</a>
+						</li>
+						<li class="nav__item">
+							<img src="./img/icons/bell.svg" alt="контакты" class="nav__img" />
+							<a href="/contacts.html" class="nav__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__contacts contacts">
+				<div class="account">
+					<img src="./img/icons/account.svg" alt="аккаунт" class="account__img" />
+					<button data-modal-link="1" class="account__modal">
+						Войти
+					</button>
+				</div>
+				<div class="address">
+					<span>г. Новосибирск</span>
+					<span>ул. Ленина 83</span>
+				</div>
+				<div class="phone">
+					<p class="phone__text_name">служба бронирования</p>
+					<p class="phone__text">+7 (383) 355 99 93</p>
+				</div>
+				<div class="language">
+					<span>RU</span>
+					<a class="language__link" href="#"></a><img class="language__img" src="./img/icons/flag.png"
+						alt="язык" />
+				</div>
+				<button id="menu-burger" class="header__menu-burger">
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</header>
+      <div id="mobile-menu" class="mobile-menu">
+   <div class="mobile-menu__body">
+      <ul class="mobile-menu__nav">
+         <li class="mobile-menu__item">
+            <svg width="50" height="50" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M20.4285 10.301C21.1768 9.57168 21.1923 8.37378 20.4629 7.62545C20.1721 7.32704 19.7908 7.13298 19.3784 7.07338L14.7188 6.39675C14.53 6.3689 14.3668 6.25052 14.2817 6.07976L12.198 1.85522C11.7357 0.918075 10.6012 0.53316 9.66403 0.995476C9.29069 1.17965 8.98847 1.48187 8.80429 1.85522L6.71922 6.07976C6.63427 6.25035 6.4713 6.36869 6.28278 6.39675L1.62181 7.07338C0.587576 7.22281 -0.129708 8.18231 0.0196797 9.21658C0.0792791 9.62898 0.273295 10.0102 0.571702 10.301L3.94438 13.589C4.08085 13.7223 4.14319 13.9142 4.11108 14.1023L3.31635 18.7442C3.13649 19.7717 3.82362 20.7505 4.85117 20.9304C5.26475 21.0028 5.69065 20.9353 6.06161 20.7387L10.2304 18.548C10.3994 18.4588 10.6015 18.4588 10.7705 18.548L14.9399 20.7394C15.8642 21.2261 17.008 20.8713 17.4948 19.947C17.689 19.5782 17.7559 19.1556 17.6852 18.7449L16.8891 14.1023C16.857 13.9142 16.9193 13.7224 17.0558 13.5891L20.4285 10.301ZM15.5949 14.324L16.3916 18.966C16.4463 19.2813 16.2351 19.5813 15.9198 19.6361C15.7935 19.658 15.6636 19.6374 15.5503 19.5776L11.3808 17.385C10.8294 17.0963 10.1715 17.0963 9.62002 17.385L5.45126 19.577C5.1682 19.7263 4.81766 19.6179 4.66831 19.3348C4.6085 19.2215 4.588 19.0915 4.6099 18.9653L5.40664 14.3234C5.51111 13.7095 5.3075 13.0835 4.86191 12.6485L1.48924 9.36183C1.2597 9.13828 1.25486 8.77096 1.47841 8.54142C1.56738 8.45008 1.68399 8.39056 1.81016 8.37214L6.46983 7.69485C7.08592 7.60518 7.61846 7.21818 7.89398 6.65988L9.97836 2.43599C10.1199 2.14891 10.4673 2.03094 10.7544 2.17245C10.8689 2.22889 10.9615 2.32151 11.0179 2.43599L13.1056 6.65988C13.3809 7.21863 13.9139 7.6058 14.5304 7.69485L19.1901 8.37214C19.5072 8.41812 19.7269 8.71247 19.6809 9.02958C19.6626 9.15596 19.6031 9.27274 19.5116 9.36183L16.1396 12.6518C15.6949 13.0862 15.4914 13.7111 15.5949 14.324Z"
+                  fill="#FFF" />
+               <path d="M6.21855 16.2895L7.32007 17.0033L8.03385 15.9018L6.93233 15.188L6.21855 16.2895Z" fill="#FFF" />
+               <path d="M7.64558 14.0858L8.74707 14.7983L9.45993 13.6963L8.35844 12.9838L7.64558 14.0858Z"
+                  fill="#FFF" />
+               <path d="M11.1576 6.94202H9.84497V8.2546H11.1576V6.94202Z" fill="#FFF" />
+               <path d="M11.1576 4.31702H9.84497V5.6296H11.1576V4.31702Z" fill="#FFF" />
+               <path d="M8.28095 9.72569L6.99829 9.4469L6.7195 10.7296L8.00215 11.0083L8.28095 9.72569Z" fill="#FFF" />
+               <path d="M4.1507 10.1712L5.43335 10.45L5.71214 9.1673L4.42949 8.8885L4.1507 10.1712Z" fill="#FFF" />
+               <path d="M12.9546 15.8993L13.6672 17.0005L14.7685 16.2878L14.0558 15.1866L12.9546 15.8993Z"
+                  fill="#FFF" />
+               <path d="M12.641 12.982L11.5396 13.6945L12.2524 14.7965L13.3539 14.084L12.641 12.982Z" fill="#FFF" />
+               <path d="M14.2855 10.7316L14.0068 9.44897L12.7242 9.72764L13.0028 11.0103L14.2855 10.7316Z"
+                  fill="#FFF" />
+               <path d="M16.5722 8.88905L15.2896 9.16785L15.5683 10.4505L16.851 10.1717L16.5722 8.88905Z" fill="#FFF" />
+            </svg>
+            <a href="/promotions.html" class="mobile-menu__link">Акции</a>
+         </li>
+         <li class="mobile-menu__item">
+            <svg width="44" height="44" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M18.125 0H15V1.25H18.125C18.4702 1.25 18.75 1.5298 18.75 1.875V18.125C18.75 18.4702 18.4702 18.75 18.125 18.75H1.875C1.5298 18.75 1.25 18.4702 1.25 18.125V1.875C1.25 1.5298 1.5298 1.25 1.875 1.25H8.75V0H1.875C0.839453 0 0 0.839453 0 1.875V18.125C0 19.1605 0.839453 20 1.875 20H18.125C19.1605 20 20 19.1605 20 18.125V1.875C20 0.839453 19.1605 0 18.125 0Z"
+                  fill="#FFF" />
+               <path
+                  d="M17.5 15.625V8.125H16.25V9.375H8.125C8.125 7.9943 7.0057 6.875 5.625 6.875H3.75V4.375H2.5V15.625H3.75V13.125H16.25V15.625H17.5ZM3.75 8.125H5.625C6.31535 8.125 6.875 8.68465 6.875 9.375H3.75V8.125ZM3.75 11.875V10.625H16.25V11.875H3.75Z"
+                  fill="#FFF" />
+               <path d="M11.25 0H10V1.25H11.25V0Z" fill="#FFF" />
+               <path d="M13.75 0H12.5V1.25H13.75V0Z" fill="#FFF" />
+            </svg>
+            <a href="/rooms.html" class="mobile-menu__link">Номера</a>
+         </li>
+         <li class="mobile-menu__item">
+            <svg width="50" height="50" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M15.7868 5.79569L16.7885 4.95427C16.4773 4.58341 16.1263 4.24788 15.7417 3.95386L14.948 4.99418C15.2558 5.23014 15.5371 5.49889 15.7868 5.79569Z"
+                  fill="#FFF" />
+               <path
+                  d="M20.9374 9.81439V8.50581H18.2809C18.2007 7.68827 17.9677 6.89301 17.5939 6.16147L16.4306 6.76146C16.7126 7.3062 16.8952 7.8969 16.9697 8.50581H6.58807C6.94965 5.63767 9.56785 3.60568 12.436 3.96722C12.9602 4.03331 13.4714 4.17835 13.9521 4.3975L14.4965 3.20603C13.8436 2.90837 13.1458 2.72108 12.4316 2.65185V1.30859H13.7401V0H9.81439V1.30859H11.123V2.65054C8.02903 2.96558 5.58271 5.4119 5.26771 8.50581H4.2529L2.29002 5.88863H0V7.19722H1.63573L3.27146 9.37798V15.7959C1.87193 16.1573 1.03035 17.5848 1.39168 18.9843C1.75305 20.3838 3.18052 21.2254 4.58005 20.8641C5.97958 20.5028 6.82116 19.0752 6.45983 17.6757C6.22179 16.7539 5.50195 16.034 4.58005 15.7959V14.3944H11.7773V13.0859H4.58005V9.81439H18.3202V13.0859H15.703V14.3944H18.3202V15.703C16.8575 15.6857 15.6578 16.8574 15.6404 18.32C15.6231 19.7827 16.7948 20.9825 18.2574 20.9998C19.7201 21.0171 20.9199 19.8455 20.9372 18.3828C20.9485 17.4319 20.4491 16.5479 19.6288 16.0668V9.81439H20.9374ZM5.23434 18.3202C5.23434 19.0429 4.64846 19.6288 3.92576 19.6288C3.20305 19.6288 2.61717 19.0429 2.61717 18.3202C2.61717 17.5975 3.20305 17.0116 3.92576 17.0116C4.64846 17.0116 5.23434 17.5975 5.23434 18.3202ZM18.3202 19.6288C17.5975 19.6288 17.0116 19.0429 17.0116 18.3202C17.0116 17.5975 17.5975 17.0116 18.3202 17.0116C19.0429 17.0116 19.6288 17.5975 19.6288 18.3202C19.6288 19.0429 19.0429 19.6288 18.3202 19.6288Z"
+                  fill="#FFF" />
+               <path d="M14.3943 13.0858H13.0857V14.3944H14.3943V13.0858Z" fill="#FFF" />
+            </svg>
+            <a href="/services.html" class="mobile-menu__link">Услуги</a>
+         </li>
+         <li class="mobile-menu__item">
+            <svg width="50" height="50" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <g clip-path="url(#clip0_906_33)">
+                  <path
+                     d="M21.6206 17.25H20.9019V15.8125H22.4292V14.4648C22.4301 13.3343 22.2423 12.2115 21.8736 11.1428L20.5145 11.6128C20.8217 12.5017 20.9827 13.4346 20.991 14.375H3.56273C3.61664 9.59931 7.50085 5.75481 12.2769 5.75C13.6662 5.74573 15.036 6.07739 16.2695 6.71672L16.9293 5.43878C16.1394 5.03669 15.3002 4.73993 14.4331 4.55616V2.875H15.8706V1.4375H8.68311V2.875H10.1206V4.54825C5.45727 5.56739 2.13089 9.6936 2.12451 14.467V15.8125H3.65186V17.25H2.93311C1.74223 17.25 0.776855 18.2154 0.776855 19.4062C0.776855 20.5971 1.74223 21.5625 2.93311 21.5625H21.6206C22.8115 21.5625 23.7769 20.5971 23.7769 19.4062C23.7769 18.2154 22.8115 17.25 21.6206 17.25ZM11.5581 2.875H12.9956V4.3125H11.5581V2.875ZM5.08936 15.8125H19.4644V17.25H5.08936V15.8125ZM21.6206 20.125H2.93311C2.53613 20.125 2.21436 19.8032 2.21436 19.4062C2.21436 19.0093 2.53613 18.6875 2.93311 18.6875H21.6206C22.0176 18.6875 22.3394 19.0093 22.3394 19.4062C22.3394 19.8032 22.0176 20.125 21.6206 20.125Z"
+                     fill="#FFF" />
+                  <path
+                     d="M19.9856 10.3959L21.2571 9.72535C21.0157 9.26858 20.7396 8.831 20.4312 8.4165L19.2812 9.27541C19.5443 9.63038 19.7798 10.005 19.9856 10.3959Z"
+                     fill="#FFF" />
+                  <path
+                     d="M19.42 7.25008C19.0531 6.88877 18.6595 6.55554 18.2427 6.25317L17.3975 7.41611C17.7558 7.67769 18.0939 7.96604 18.4087 8.27861L19.42 7.25008Z"
+                     fill="#FFF" />
+               </g>
+               <defs>
+                  <clipPath id="clip0_906_33">
+                     <rect width="65" height="65" fill="white" transform="translate(0.776855)" />
+                  </clipPath>
+               </defs>
+            </svg>
+            <a href="/contacts.html" class="mobile-menu__link">Контакты</a>
+         </li>
+      </ul>
+      <div class="mobile-menu__phone">
+         <p class="mobile-menu__phone-text">служба бронирования</p>
+         <a href="tel:+73833559993" class="mobile-menu__phone-link">+7 (383) 355 99 93</a>
+      </div>
+   </div>
+</div>
+      <main id="main" class="main">
+         <section class="promo">
+            <ul class="promo__breadcrumbs breadcrumbs">
+               <li class="breadcrumbs__item">
+                  <a href="/" class="breadcrumbs__main-link">Главная</a>
+               </li>
+               <li class="breadcrumbs__item">
+                  <a href="/promotions.html" class="breadcrumbs__main-link">Акции</a>
+               </li>
+               <li class="breadcrumbs__item breadcrumbs__current-page">
+                  Бесплатные лимоны каждому гостю
+               </li>
+            </ul>
+            <div class="promo__img-container">
+               <img src="./img/content/prom_01.jpg" alt="Акция" class="promo__img">
+            </div>
+            <div class="promo__container">
+               <div class="promo__item">
+                  <h4 class="promo__item-title">Бесплатные лимоны каждому гостю</h4>
+                  <article class="promo__item-text">
+                     <p>
+                        А также некоторые особенности внутренней политики набирают популярность среди определенных
+                        слоев населения, а значит, должны
+                        быть смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего
+                        возрастает их статус бесполезности. Перспективное планирование играет важную роль в
+                        формировании системы массового участия.
+                     </p>
+                     <p>
+                        Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера
+                        нашей активности в значительной степени обусловливает важность модели развития.
+                        Предварительные выводы неутешительны: высококачественный прототип будущего проекта
+                        обеспечивает актуальность вывода текущих активов
+                     </p>
+                  </article>
+                  <a href="/rooms.html" class="questions__form-btn">
+                     Забронировать номер
+                  </a>
+               </div>
+            </div>
+         </section>
+			<section class="questions">
+   <div class="questions__container container">
+      <div class="questions__wrapper">
+         <form id="questions-form" action="#" method="post" class="questions__form">
+            <h3 class="questions__form-title">Остались вопросы</h3>
+            <div class="questions__form-item">
+               <input type="text" id="name" name="name" class="questions__form-input" placeholder="Имя"  autocomplete="name"/>
+            </div>
+            <div class="questions__form-item">
+               <input id="phone" name="phone" class="questions__form-input" placeholder="+7 (___) ___-__-__"
+                  pattern="/^+7\d*" type="tel"  autocomplete="tel"/>
+            </div>
+            <div class="questions__form-item">
+               <textarea name="comments" id="" cols="30" rows="2" class="questions__form-area"
+                  placeholder="Комментарий, если есть"></textarea>
+            </div>
+            <button type="submit" class="questions__form-btn">
+               Получить ответ
+            </button>
+            <p class="questions__form-note">
+               Перезвоним в течение 15 минут, нажимая на кнопку вы соглашаетесь
+               <a href="/privacy-policy.html">с политикой обработки персональных данных.</a>
+            </p>
+         </form>
+         <div class="questions__callback">
+            <div class="questions__callback-wrapper">
+               <p class="questions__callback-text">Телефон обратной связи</p>
+               <p class="questions__callback-phone">+7 (383) 355 99 93</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+      </main>
+      <footer id="footer" class="footer">
+   <div class="footer__container">
+      <div class="footer__wrapper">
+         <div class="relation">
+            <h5 class="relation__title">Связаться с нами</h5>
+            <div class="relation__contacts">
+               <a class="relation__phone" href="tel:+3833559993">+7 (383) 355 99 93</a>
+               <a class="relation__email" href="mailto:info@hotelavitel.ru">info@hotelavitel.ru</a>
+            </div>
+            <ul class="relation__social-list">
+               <li class="relation__social-item">
+                  <a href="http://facebook.com" class="relation__social-link">
+                     <img src="./img/icons/facebook.svg" alt="фэйсбук">
+                  </a>
+               </li>
+               <li class="relation__social-item">
+                  <a href="http://vk.com" class="relation__social-link">
+                     <img src="./img/icons/vk.svg" alt="вконтакте">
+                  </a>
+               </li>
+               <li class="relation__social-item">
+                  <a href="http://instagram.com" class="relation__social-link">
+                     <img src="./img/icons/instagram.svg" alt="инстаграм">
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="footer__nav">
+            <div class="nav__booking">
+               <h5 class="nav__booking-title">Бронирование</h5>
+               <a href="/rooms" class="nav__booking-link">Забронировать номер</a>
+            </div>
+            <div class="footer__menu menu">
+               <h5 class="menu__title title-info" data-menu-id="1">Информация</h5>
+               <ul class="menu__list" data-item="1">
+                  <li class="footer__menu-item"><a href="/promotions" class="menu__link">Акции</a></li>
+                  <li class="footer__menu-item"><a href="/rooms" class="menu__link">Номера</a></li>
+                  <li class="footer__menu-item"><a href="/services" class="menu__link">Услуги</a></li>
+                  <li class="footer__menu-item"><a href="/contacts" class="menu__link">Контакты</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer__policy">
+            <div class="rules">
+               <h5 class="menu__title menu__title_hidden"></h5>
+               <ul class="rules__list" data-item="2">
+                  <li><a href="/hotel-policies">Правила проживания</a></li>
+                  <li><a href="/loyality-program">Программа лояльности</a></li>
+                  <li><a href="/legal-information">Правовая информация</a></li>
+                  <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
+               </ul>
+            </div>
+            <div class="details">
+               <h5 class="menu__title details-title" data-menu-id="2">Документы и правила</h5>
+               <ul class="details__list" data-item="2">
+                  <li><a href="/details">Реквизиты</a></li>
+                  <li><a href="/site-map">Карта сайта</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer__option-info">
+            <div class="footer__logo">
+               <img src="./img/icons/logo-3.svg" alt="логотип" class="footer__logo-img">
+               <p class="footer__logo-name">Авитель</p>
+               <span class="footer__logo-subname">2020</span>
+            </div>
+            <span class="footer__develop">создано <a href="#">web4you</a></span>
+         </div>
+      </div>
+   </div>
+</footer> <div id="scroll" class="scroll">
+   <span></span>
+</div> <div data-modal="1" class="modal">
+   <div data-close="true" class="modal__overlay">
+      <div class="modal__body">
+         <span data-close="true" class="modal__close" data-close="true">&#10006;</span>
+         <div class="modal__content">
+            <form id="account-form" action="#" method="post" class="questions__form">
+               <h3 class="modal__title">Аккаунт</h3>
+               <div class="questions__form-item">
+                  <input type="email" id="email" name="email" autocomplete="email" class="questions__form-input" placeholder="E-mail" />
+               </div>
+               <div class="questions__form-item">
+                  <input type="password" id="password" name="password" class="questions__form-input" autocomplete="current-password" placeholder="Пароль" />
+               </div>
+               <button type="submit" class="questions__form-btn">
+                  Войти
+               </button>
+               <p class="questions__form-note">
+                  <a href="/forgot-password">Забыли пароль?</a>
+               </p>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+   </div>
+   <script src="js/index.js"></script>
+</body>
+
+</html>
