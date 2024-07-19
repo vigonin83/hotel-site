@@ -5,12 +5,12 @@
   "homepage": "https://vigonin83.github.io/hotel",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d dist",
     "build": "gulp build --build",
     "start": "gulp",
     "dev": "gulp",
     "clean": "gulp cleanDist",
-    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
