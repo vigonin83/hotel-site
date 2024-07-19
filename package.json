@@ -2,12 +2,15 @@
   "name": "hotel-site",
   "version": "1.0.0",
   "description": "html, scss, js, gulp, swiper",
+  "homepage": "https://vigonin83.github.io/hotel",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "build": "gulp build --build",
     "start": "gulp",
     "dev": "gulp",
     "clean": "gulp cleanDist",
-    "build": "gulp build --build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
@@ -29,6 +32,7 @@
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "css-loader": "^7.1.1",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",
