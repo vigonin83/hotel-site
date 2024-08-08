@@ -5,7 +5,7 @@
   "homepage": "https://vigonin83.github.io/hotelSite",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run dev",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "gulp build --build",
     "start": "gulp",
