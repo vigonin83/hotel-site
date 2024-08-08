@@ -2,7 +2,7 @@
   "name": "hotel-site",
   "version": "1.0.0",
   "description": "html, scss, js, gulp, swiper",
-  "homepage": "https://vigonin83.github.io/hotel",
+  "homepage": "https://vigonin83.github.io/hotelSite",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run dev",
